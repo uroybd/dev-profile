@@ -1,0 +1,24 @@
+{% if resume.projects %}
+<section id="projects" class="resume-section">
+  <h3 class="section-title">Projects</h3>
+  <hr />
+  <div id="projects-list">
+  {% for project in resume.projects %}
+  <div class="project-item">
+    <div class="project-header">
+      <h4>{% if project.url %}<a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>{% elif project.website %}<a href="{{ project.website }}" target="_blank" rel="noopener">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</h4>
+      <span class="project-dates">{{ project.startDate | truncate(7, false, "") }}{% if project.endDate %} – {{ project.endDate | truncate(7, false, "") }}{% endif %}</span>
+    </div>
+    {% if project.description %}<p class="project-description">{{ project.description }}</p>{% endif %}
+    {% if project.highlights %}
+    <ul class="project-highlights">
+      {% for highlight in project.highlights %}
+      <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}

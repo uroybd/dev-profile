@@ -1,0 +1,300 @@
+@use "themes";
+@use "base";
+
+header {
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .avatar {
+    margin-right: 20px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.resume-section {
+  padding: 5vmin;
+  padding-top: 0;
+
+  p,
+  li,
+  span {
+    font-weight: 300;
+  }
+}
+
+section#summary {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+#skills-list {
+  columns: 2;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    columns: 1;
+  }
+
+  .skill-item {
+    padding-top: 2rem;
+    break-inside: avoid;
+  }
+}
+
+.skill-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+section#info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+
+  .info-item {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    a {
+      display: block;
+    }
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+#languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+}
+
+.language-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.language-name {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.language-fluency {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+#interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+}
+
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.interest-name {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+#projects-list {
+  columns: 2;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    columns: 1;
+  }
+
+  .project-item {
+    padding-top: 2rem;
+    break-inside: avoid;
+  }
+}
+
+.project-item {
+  margin-bottom: 2.5rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+.project-dates {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: var(--color-accent);
+}
+
+.project-description {
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1.6;
+}
+
+.project-highlights {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.8;
+}
+
+#work-list {
+  columns: 2;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    columns: 1;
+  }
+
+  .work-item {
+    padding-top: 2rem;
+    break-inside: avoid;
+  }
+}
+
+.work-item {
+  margin-bottom: 2.5rem;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+.work-title h4 {
+  margin-bottom: 0.25rem;
+}
+
+.work-position {
+  font-size: 0.95rem;
+  color: var(--color-accent);
+}
+
+.work-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: var(--color-accent);
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
+}
+
+.work-summary {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.work-highlights {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.8;
+}
+
+a:has(footer) {
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+footer {
+  background-color: #d9d4d0;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

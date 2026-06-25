@@ -1,0 +1,30 @@
+{% if resume.work %}
+<section id="work" class="resume-section">
+  <h3 class="section-title">Work</h3>
+  <hr />
+  <div id="work-list">
+  {% for job in resume.work %}
+  <div class="work-item">
+    <div class="work-header">
+      <div class="work-title">
+        <h4>{% if job.website %}<a href="{{ job.website }}" target="_blank" rel="noopener">{{ job.name }}</a>{% else %}{{ job.name }}{% endif %}</h4>
+        <span class="work-position">{{ job.position }}</span>
+      </div>
+      <div class="work-meta">
+        {% if job.location %}<span class="work-location">{{ job.location }}</span>{% endif %}
+        <span class="work-dates">{{ job.startDate | truncate(7, false, "") }}{% if job.endDate %} – {{ job.endDate | truncate(7, false, "") }}{% else %} – Present{% endif %}</span>
+      </div>
+    </div>
+    {% if job.summary %}<p class="work-summary">{{ job.summary }}</p>{% endif %}
+    {% if job.highlights %}
+    <ul class="work-highlights">
+      {% for highlight in job.highlights %}
+      <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}

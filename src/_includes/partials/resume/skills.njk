@@ -1,0 +1,23 @@
+{% if resume.skills %}
+<section id="skills" class="resume-section">
+  <h3 class="section-title">Skills</h3>
+  <hr />
+  <div id="skills-list">
+    {% for skill in resume.skills %}
+    <div class="skill-item">
+      <h4>{{ skill.name }}</h4>
+      {% if skill.level %}
+      <div class="skill-level">{{ skill.level }}</div>
+      {% endif %}
+      {% if skill.keywords %}
+      <div class="skill-keywords">
+        {% for keyword in skill.keywords %}
+        <span class="pill">{{ keyword }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

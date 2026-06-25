@@ -1,0 +1,74 @@
+const yaml = require("js-yaml");
+const sass = require("sass");
+const lucide = require("lucide");
+const simpleIcons = require("simple-icons");
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
+function iconToSvg(name, attrs = {}) {
+  const iconName = name.replace(/-([a-z])/g, (_, c) => c.toUpperCase()).replace(/^([a-z])/, (_, c) => c.toUpperCase());
+  const icon = lucide.icons[iconName];
+  if (!icon) throw new Error(`Lucide icon not found: "${name}" (resolved to "${iconName}")`);
+
+  const defaultAttrs = { xmlns: "http://www.w3.org/2000/svg", width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": 2, "stroke-linecap": "round", "stroke-linejoin": "round" };
+  const merged = { ...defaultAttrs, ...attrs };
+  const svgAttrs = Object.entries(merged).map(([k, v]) => `${k}="${v}"`).join(" ");
+  const children = icon.map(([tag, childAttrs]) => {
+    const ca = Object.entries(childAttrs).map(([k, v]) => `${k}="${v}"`).join(" ");
+    return `<${tag} ${ca}/>`;
+  }).join("");
+  return `<svg ${svgAttrs}>${children}</svg>`;
+}
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addShortcode("icon", (name, extraClass) => {
+    const attrs = extraClass ? { class: extraClass } : {};
+    return iconToSvg(name, attrs);
+  });
+
+  eleventyConfig.addShortcode("brandicon", (slug, extraClass) => {
+    const key = "si" + slug.charAt(0).toUpperCase() + slug.slice(1);
+    const icon = simpleIcons[key];
+    const classAttr = extraClass ? ` class="${extraClass}"` : "";
+    const svgStr = icon ? icon.svg : (() => {
+      const localPath = path.join("src", "icons", `${slug}.svg`);
+      if (!fs.existsSync(localPath)) throw new Error(`Brand icon not found: "${slug}" (checked simple-icons and ${localPath})`);
+      return fs.readFileSync(localPath, "utf8").trim();
+    })();
+    return svgStr.replace("<svg ", `<svg fill="black" width="24" height="24"${classAttr} `);
+  });
+  eleventyConfig.on("afterBuild", () => {
+    const resumeData = yaml.load(fs.readFileSync("src/_data/resume.yaml", "utf8"));
+    if (resumeData.basics) delete resumeData.basics.image;
+    const tmpJson = path.join(require("os").tmpdir(), "resume-build.json");
+    fs.writeFileSync(tmpJson, JSON.stringify(resumeData));
+    execSync(`./node_modules/.bin/resume export public/cv.pdf --resume ${tmpJson} --theme ./theme`, { stdio: "inherit" });
+  });
+
+  eleventyConfig.addDataExtension("yaml, yml", (contents) => {
+    return yaml.load(contents);
+  });
+
+  eleventyConfig.addPassthroughCopy("src/images");
+
+  eleventyConfig.addTemplateFormats("scss");
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css",
+    compile: async function (inputContent, inputPath) {
+      if (inputPath.split("/").at(-1).startsWith("_")) return;
+      return async () => {
+        let result = sass.compile(inputPath);
+        return result.css;
+      };
+    },
+  });
+  return {
+    dir: {
+      input: "src", // Now looks inside ./src/ for templates
+      includes: "_includes", // Points to ./src/_includes/
+      data: "_data", // Points to ./src/_data/
+      output: "public", // Renames output folder from _site to public
+    },
+  };
+};

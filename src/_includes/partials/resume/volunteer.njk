@@ -1,0 +1,29 @@
+{% if resume.volunteer %}
+<section id="volunteer" class="resume-section">
+  <h3 class="section-title">Open Source Contributions</h3>
+  <hr />
+  <div id="volunteer-list">
+  {% for item in resume.volunteer %}
+  <div class="work-item">
+    <div class="work-header">
+      <div class="work-title">
+        <h4>{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.organization }}</a>{% else %}{{ item.organization }}{% endif %}</h4>
+        <span class="work-position">{{ item.position }}</span>
+      </div>
+      <div class="work-meta">
+        <span class="work-dates">{{ item.startDate | truncate(7, false, "") }}{% if item.endDate %} – {{ item.endDate | truncate(7, false, "") }}{% else %} – Present{% endif %}</span>
+      </div>
+    </div>
+    {% if item.summary %}<p class="work-summary">{{ item.summary }}</p>{% endif %}
+    {% if item.highlights %}
+    <ul class="work-highlights">
+      {% for highlight in item.highlights %}
+      <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}

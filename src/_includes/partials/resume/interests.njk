@@ -1,0 +1,20 @@
+{% if resume.interests %}
+<section id="interests" class="resume-section">
+  <h3 class="section-title">Interests</h3>
+  <hr />
+  <div id="interests-list">
+    {% for interest in resume.interests %}
+    <div class="interest-item">
+      <span class="interest-name">{{ interest.name }}</span>
+      {% if interest.keywords %}
+      <div class="skill-keywords">
+        {% for keyword in interest.keywords %}
+        <span class="pill">{{ keyword }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

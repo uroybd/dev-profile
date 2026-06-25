@@ -1,0 +1,18 @@
+<section class="resume-section" id="info">
+  <div class="info-item" id="email">
+    <span class="icon">{% icon "mail" %}</span> <a href="mailto:{{ resume.basics.email }}">{{ resume.basics.email }}</a>
+  </div>
+  <div class="info-item" id="website">
+    <span class="icon">{% icon "link" %}</span> <a href="{{ resume.basics.website }}">{{ resume.basics.website }}</a>
+  </div>
+  {% for profile in resume.basics.profiles %}
+  <div class="info-item" id="profile-{{ profile.network | slug }}">
+    <span class="icon">{% brandicon profile.network %}</span> <a href="{{ profile.url }}">{{ profile.username
+      }}</a>
+  </div>
+  {% endfor %}
+  <div class="info-item" id="location">
+    <span class="icon">{% icon "map-pinned" %}</span> <span>{{ resume.basics.location.city }},
+      {{resume.basics.location.countryCode }}</span>
+  </div>
+</section>
