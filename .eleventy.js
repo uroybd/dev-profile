@@ -48,6 +48,7 @@ module.exports = function (eleventyConfig) {
     const tmpJson = path.join(require("os").tmpdir(), "resume-build.json");
     fs.writeFileSync(tmpJson, JSON.stringify(resumeData));
     execSync(`./node_modules/.bin/resume export public/${cvFilename}.pdf --resume ${tmpJson} --theme ./theme`, { stdio: "inherit" });
+    fs.copyFileSync(`public/${cvFilename}.pdf`, "public/cv.pdf");
   });
 
   eleventyConfig.addDataExtension("yaml, yml", (contents) => {
