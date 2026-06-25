@@ -325,6 +325,7 @@ function render(resume) {
     <h3>Interests</h3><hr>
     <div class="interest-list">${interestsHtml}</div>
   </div>` : ""}
+
 </body>
 </html>`;
 }

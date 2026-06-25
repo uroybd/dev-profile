@@ -22,7 +22,8 @@ function iconToSvg(name, attrs = {}) {
 }
 
 module.exports = function (eleventyConfig) {
-  const buildDate = new Date().toISOString().slice(0, 16).replace("T", "-").replace(":", "-");
+  const _now = new Date();
+  const buildDate = _now.toISOString().slice(0, 16).replace("T", "-").replace(":", "-");
   const resumeName = yaml.load(fs.readFileSync("src/_data/resume.yaml", "utf8")).basics.name.replace(/\s+/g, "_");
   const cvFilename = `cv-${resumeName}-${buildDate}`;
   eleventyConfig.addGlobalData("cvFilename", cvFilename);
