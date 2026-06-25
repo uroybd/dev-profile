@@ -22,6 +22,10 @@ function iconToSvg(name, attrs = {}) {
 }
 
 module.exports = function (eleventyConfig) {
+  const buildDate = new Date().toISOString().slice(0, 16).replace("T", "-").replace(":", "-");
+  const resumeName = yaml.load(fs.readFileSync("src/_data/resume.yaml", "utf8")).basics.name.replace(/\s+/g, "_");
+  const cvFilename = `cv-${resumeName}-${buildDate}`;
+  eleventyConfig.addGlobalData("cvFilename", cvFilename);
   eleventyConfig.addShortcode("icon", (name, extraClass) => {
     const attrs = extraClass ? { class: extraClass } : {};
     return iconToSvg(name, attrs);
@@ -43,7 +47,7 @@ module.exports = function (eleventyConfig) {
     if (resumeData.basics) delete resumeData.basics.image;
     const tmpJson = path.join(require("os").tmpdir(), "resume-build.json");
     fs.writeFileSync(tmpJson, JSON.stringify(resumeData));
-    execSync(`./node_modules/.bin/resume export public/cv.pdf --resume ${tmpJson} --theme ./theme`, { stdio: "inherit" });
+    execSync(`./node_modules/.bin/resume export public/${cvFilename}.pdf --resume ${tmpJson} --theme ./theme`, { stdio: "inherit" });
   });
 
   eleventyConfig.addDataExtension("yaml, yml", (contents) => {

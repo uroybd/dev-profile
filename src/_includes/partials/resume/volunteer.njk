@@ -10,9 +10,9 @@
         <h4>{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.organization }}</a>{% else %}{{ item.organization }}{% endif %}</h4>
         <span class="work-position">{{ item.position }}</span>
       </div>
-      <div class="work-meta">
+      {% if item.startDate or item.endDate %}<div class="work-meta">
         <span class="work-dates">{{ item.startDate | truncate(7, false, "") }}{% if item.endDate %} – {{ item.endDate | truncate(7, false, "") }}{% else %} – Present{% endif %}</span>
-      </div>
+      </div>{% endif %}
     </div>
     {% if item.summary %}<p class="work-summary">{{ item.summary }}</p>{% endif %}
     {% if item.highlights %}

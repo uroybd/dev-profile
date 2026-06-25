@@ -88,9 +88,7 @@ function render(resume) {
           <h4>${v.url ? `<a href="${v.url}">${v.organization}</a>` : v.organization}</h4>
           <div class="sub">${v.position}</div>
         </div>
-        <div class="meta">
-          <span>${date(v.startDate)} – ${date(v.endDate)}</span>
-        </div>
+        ${v.startDate || v.endDate ? `<div class="meta"><span>${date(v.startDate)} – ${date(v.endDate)}</span></div>` : ""}
       </div>
       ${v.summary ? `<p>${v.summary}</p>` : ""}
       ${v.highlights && v.highlights.length ? `<ul>${v.highlights.map(h => `<li>${h}</li>`).join("")}</ul>` : ""}
@@ -100,7 +98,7 @@ function render(resume) {
     <div class="col-item">
       <div class="item-header">
         <h4>${(p.url || p.website) ? `<a href="${p.url || p.website}">${p.name}</a>` : p.name}</h4>
-        <span class="meta">${date(p.startDate)}${p.endDate ? " – " + date(p.endDate) : ""}</span>
+        ${p.startDate || p.endDate ? `<span class="meta">${date(p.startDate)}${p.endDate ? " – " + date(p.endDate) : ""}</span>` : ""}
       </div>
       ${p.description ? `<p>${p.description}</p>` : ""}
       ${p.highlights && p.highlights.length ? `<ul>${p.highlights.map(h => `<li>${h}</li>`).join("")}</ul>` : ""}
@@ -194,6 +192,7 @@ function render(resume) {
     #summary {
       font-size: 0.95rem;
       line-height: 1.6;
+      text-align: justify;
     }
 
     .two-col {

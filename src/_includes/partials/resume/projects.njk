@@ -7,7 +7,7 @@
   <div class="project-item">
     <div class="project-header">
       <h4>{% if project.url %}<a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>{% elif project.website %}<a href="{{ project.website }}" target="_blank" rel="noopener">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</h4>
-      <span class="project-dates">{{ project.startDate | truncate(7, false, "") }}{% if project.endDate %} – {{ project.endDate | truncate(7, false, "") }}{% endif %}</span>
+      {% if project.startDate or project.endDate %}<span class="project-dates">{{ project.startDate | truncate(7, false, "") }}{% if project.endDate %} – {{ project.endDate | truncate(7, false, "") }}{% endif %}</span>{% endif %}
     </div>
     {% if project.description %}<p class="project-description">{{ project.description }}</p>{% endif %}
     {% if project.highlights %}
