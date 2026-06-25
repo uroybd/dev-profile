@@ -68,8 +68,11 @@ function render(resume) {
   const workHtml = work.map(j => `
     <div class="col-item">
       <div class="item-header">
-        <div>
-          <h4>${j.website ? `<a href="${j.website}">${j.name}</a>` : j.name}</h4>
+        <div class="title-container">
+          <div class="title-with-url">
+            <h4>${j.website ? `<a href="${j.website}">${j.name}</a>` : j.name}</h4>
+            ${j.website ? `<a class="item-url" href="${j.website}">${j.website}</a>` : ""}
+          </div>
           <div class="sub">${j.position}</div>
         </div>
         <div class="meta">
@@ -84,8 +87,11 @@ function render(resume) {
   const volunteerHtml = volunteer.map(v => `
     <div class="col-item">
       <div class="item-header">
-        <div>
-          <h4>${v.url ? `<a href="${v.url}">${v.organization}</a>` : v.organization}</h4>
+        <div class="title-container">
+          <div class="title-with-url">
+            <h4>${v.url ? `<a href="${v.url}">${v.organization}</a>` : v.organization}</h4>
+            ${v.url ? `<a class="item-url" href="${v.url}">${v.url}</a>` : ""}
+          </div>
           <div class="sub">${v.position}</div>
         </div>
         ${v.startDate || v.endDate ? `<div class="meta"><span>${date(v.startDate)} – ${date(v.endDate)}</span></div>` : ""}
@@ -97,7 +103,10 @@ function render(resume) {
   const projectsHtml = projects.map(p => `
     <div class="col-item">
       <div class="item-header">
-        <h4>${(p.url || p.website) ? `<a href="${p.url || p.website}">${p.name}</a>` : p.name}</h4>
+        <div class="title-with-url">
+          <h4>${(p.url || p.website) ? `<a href="${p.url || p.website}">${p.name}</a>` : p.name}</h4>
+          ${(p.url || p.website) ? `<a class="item-url" href="${p.url || p.website}">${p.url || p.website}</a>` : ""}
+        </div>
         ${p.startDate || p.endDate ? `<span class="meta">${date(p.startDate)}${p.endDate ? " – " + date(p.endDate) : ""}</span>` : ""}
       </div>
       ${p.description ? `<p>${p.description}</p>` : ""}
@@ -214,6 +223,23 @@ function render(resume) {
       margin-bottom: 0.5rem;
     }
 
+    .title-container {
+      flex: 1;
+    }
+
+    .title-with-url {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .title-with-url h4 {
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
     .sub {
       font-size: 0.9rem;
       color: var(--accent);
@@ -265,6 +291,14 @@ function render(resume) {
     .lang-name {
       font-size: 1rem;
       font-weight: 400;
+    }
+
+    .item-url {
+      font-size: 0.78rem;
+      color: var(--accent);
+      opacity: 0.7;
+      text-align: right;
+      word-break: break-all;
     }
 
   `;
