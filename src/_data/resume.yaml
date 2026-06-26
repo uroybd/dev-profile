@@ -36,7 +36,6 @@ skills:
       - Kotlin
       - Clojure
   - name: "Cloud & DevOps"
-    level: "Senior"
     keywords:
       - "AWS"
       - "Google Cloud Platform (GCP)"
@@ -47,8 +46,14 @@ skills:
       - "Serverless"
       - "Cloudflare"
       - "OpenStack"
+  - name: "Databases"
+    keywords:
+      - "PostgreSQL"
+      - "MySQL"
+      - "MongoDB"
+      - "Redis"
+      - "Elasticsearch"
   - name: "Architecture & Tooling"
-    level: "Senior"
     keywords:
       - "System Design"
       - "API Design"
@@ -57,7 +62,6 @@ skills:
       - "CLI Tools"
       - "Open Source Maintenance"
   - name: "Frameworks"
-    level: "Senior"
     keywords:
       - "Django"
       - "Node.js"
