@@ -289,8 +289,8 @@ function render(resume) {
     }
 
     .col-item {
-      break-inside: avoid;
-      page-break-inside: avoid;
+      // break-inside: avoid;
+      // page-break-inside: avoid;
       margin-bottom: 1.25rem;
     }
 
