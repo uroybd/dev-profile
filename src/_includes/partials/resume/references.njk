@@ -6,7 +6,7 @@
   {% for ref in resume.references %}
   <figure class="reference-item">
     <blockquote class="reference-quote">
-      <p>{{ ref.reference }}</p>
+      {{ ref.reference | md | safe }}
     </blockquote>
     <figcaption class="reference-name">— {{ ref.name }}</figcaption>
   </figure>

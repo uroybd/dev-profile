@@ -2,6 +2,10 @@ const lucide = require("lucide");
 const simpleIcons = require("simple-icons");
 const fs = require("fs");
 const path = require("path");
+const markdownIt = require("markdown-it");
+const md = new markdownIt({ html: true });
+const mdBlock = (str) => str ? md.render(String(str)) : "";
+const mdInline = (str) => str ? md.renderInline(String(str)) : "";
 
 function lucideIcon(name) {
   const key = name.replace(/-([a-z])/g, (_, c) => c.toUpperCase()).replace(/^([a-z])/, (_, c) => c.toUpperCase());
@@ -80,8 +84,8 @@ function render(resume) {
           <span>${date(j.startDate)} – ${date(j.endDate)}</span>
         </div>
       </div>
-      ${j.summary ? `<p>${j.summary}</p>` : ""}
-      ${j.highlights && j.highlights.length ? `<ul>${j.highlights.map(h => `<li>${h}</li>`).join("")}</ul>` : ""}
+      ${j.summary ? mdBlock(j.summary) : ""}
+      ${j.highlights && j.highlights.length ? `<ul>${j.highlights.map(h => `<li>${mdInline(h)}</li>`).join("")}</ul>` : ""}
     </div>`).join("");
 
   const volunteerHtml = volunteer.map(v => `
@@ -96,8 +100,8 @@ function render(resume) {
         </div>
         ${v.startDate || v.endDate ? `<div class="meta"><span>${date(v.startDate)} – ${date(v.endDate)}</span></div>` : ""}
       </div>
-      ${v.summary ? `<p>${v.summary}</p>` : ""}
-      ${v.highlights && v.highlights.length ? `<ul>${v.highlights.map(h => `<li>${h}</li>`).join("")}</ul>` : ""}
+      ${v.summary ? mdBlock(v.summary) : ""}
+      ${v.highlights && v.highlights.length ? `<ul>${v.highlights.map(h => `<li>${mdInline(h)}</li>`).join("")}</ul>` : ""}
     </div>`).join("");
 
   const projectsHtml = projects.map(p => `
@@ -109,8 +113,8 @@ function render(resume) {
         </div>
         ${p.startDate || p.endDate ? `<span class="meta">${date(p.startDate)}${p.endDate ? " – " + date(p.endDate) : ""}</span>` : ""}
       </div>
-      ${p.description ? `<p>${p.description}</p>` : ""}
-      ${p.highlights && p.highlights.length ? `<ul>${p.highlights.map(h => `<li>${h}</li>`).join("")}</ul>` : ""}
+      ${p.description ? mdBlock(p.description) : ""}
+      ${p.highlights && p.highlights.length ? `<ul>${p.highlights.map(h => `<li>${mdInline(h)}</li>`).join("")}</ul>` : ""}
     </div>`).join("");
 
   const languagesHtml = languages.map(l => `
@@ -127,8 +131,8 @@ function render(resume) {
 
   const referencesHtml = references.map(r => `
     <figure class="reference-item">
-      <blockquote class="reference-quote"><p>${r.reference}</p></blockquote>
-      <figcaption class="reference-name">— ${r.name}</figcaption>
+      <blockquote class="reference-quote">${mdBlock(r.reference)}</blockquote>
+      <figcaption class="reference-name">— ${mdInline(r.name)}</figcaption>
     </figure>`).join("");
 
   const css = `
@@ -344,6 +348,7 @@ function render(resume) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${basics.name || "Resume"}</title>
   <style>${css}</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 </head>
 <body>
   <header>
@@ -356,7 +361,7 @@ function render(resume) {
 
   ${contactItems ? `<div class="contact">${contactItems}</div>` : ""}
 
-  ${basics.summary ? `<div class="section" id="summary"><p>${basics.summary}</p></div>` : ""}
+  ${basics.summary ? `<div class="section" id="summary">${mdBlock(basics.summary)}</div>` : ""}
 
   ${skills.length ? `
   <div class="section">
@@ -402,6 +407,8 @@ function render(resume) {
     </div>` : ""}
   </div>` : ""}
 
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}]})"></script>
 </body>
 </html>`;
 }

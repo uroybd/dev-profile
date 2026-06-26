@@ -18,11 +18,11 @@
         <span class="work-dates">{{ job.startDate | truncate(7, false, "") }}{% if job.endDate %} – {{ job.endDate | truncate(7, false, "") }}{% else %} – Present{% endif %}</span>
       </div>
     </div>
-    {% if job.summary %}<p class="work-summary">{{ job.summary }}</p>{% endif %}
+    {% if job.summary %}<div class="work-summary">{{ job.summary | md | safe }}</div>{% endif %}
     {% if job.highlights %}
     <ul class="work-highlights">
       {% for highlight in job.highlights %}
-      <li>{{ highlight }}</li>
+      <li>{{ highlight | mdInline | safe }}</li>
       {% endfor %}
     </ul>
     {% endif %}

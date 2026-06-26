@@ -5,6 +5,8 @@ const simpleIcons = require("simple-icons");
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+const markdownIt = require("markdown-it");
+const md = new markdownIt({ html: true });
 
 function iconToSvg(name, attrs = {}) {
   const iconName = name.replace(/-([a-z])/g, (_, c) => c.toUpperCase()).replace(/^([a-z])/, (_, c) => c.toUpperCase());
@@ -27,6 +29,9 @@ module.exports = function (eleventyConfig) {
   const resumeName = yaml.load(fs.readFileSync("src/_data/resume.yaml", "utf8")).basics.name.replace(/\s+/g, "_");
   const cvFilename = `cv-${resumeName}-${buildDate}`;
   eleventyConfig.addGlobalData("cvFilename", cvFilename);
+  eleventyConfig.addFilter("md", (content) => content ? md.render(String(content)) : "");
+  eleventyConfig.addFilter("mdInline", (content) => content ? md.renderInline(String(content)) : "");
+
   eleventyConfig.addShortcode("icon", (name, extraClass) => {
     const attrs = extraClass ? { class: extraClass } : {};
     return iconToSvg(name, attrs);

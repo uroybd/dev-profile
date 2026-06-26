@@ -98,10 +98,10 @@ work:
     position: "Engineering Manager"
     startDate: "2024-11-15"
     highlights:
-      - "Ported a significant amount of JS code from the POC to Golang, enhancing it on the way."
-      - "Implemented microservices for tasks and crons."
-      - "Architected and implemented Bulk-route optimization reducing route creation complexity from O(n) to O(1)"
-      - "Manage project health by enforcing testing, security standards, and best practices."
+      - "Engineered the architectural migration of legacy JavaScript proof-of-concept (POC) codebases to Go, drastically optimizing runtime memory consumption and type safety."
+      - "Designed and deployed highly available, decoupled distributed microservices to orchestrate high-throughput background tasks and scheduled cron layers."
+      - "Architected a proprietary bulk-route optimization algorithm, successfully reducing computational complexity from $O(n)$ to $O(1)$ to unlock instantaneous multi-vendor logistics generation."
+      - "Maintained continuous system health by enforcing rigorous test-driven development (TDD), security compliance protocols, and modern CI/CD pipelines."
   - summary: >
       In between starting as a full-stack developer and leaving as a technology director, I managed and ensure growth for my team,
       delivered premium products for high-paying clients on time, and established the best practices.
@@ -112,9 +112,9 @@ work:
     startDate: "2017-02-04"
     endDate: "2024-11-14"
     highlights:
-      - "Managed projects to ensure on time delivery."
-      - "Managed team, knowledge base, processes, and training."
-      - "Brought the culture of open-source contribution as an organization."
+      - "Directed cross-functional engineering squads to guarantee predictable, on-time lifecycle delivery of enterprise-grade software products for premium global clients."
+      - "Standardized engineering processes, unified internal knowledge architectures, and instituted technical training tracks to systematically scale team operational velocity."
+      - "Pioneered a company-wide initiative for upstream open-source contribution, transforming the internal engineering culture to align with global development standards."
   - summary: "Worked as DevOps engineer to build financial application and manage the on-premise servers."
     name: "Panacea Systems Ltd."
     location: "Dhaka"
@@ -122,8 +122,8 @@ work:
     startDate: "2015-06-01"
     endDate: "2016-09-30"
     highlights:
-      - "Architected, deployed and maintained on-premise OpenStack servers."
-      - "Built financial applications for inter-vendor communications."
+      - "Architected, provisioned, and maintained highly available, bare-metal on-premise OpenStack cloud environments."
+      - "Developed secure, deterministic financial applications tailored for low-overhead, multi-vendor communication pipelines."
 projects:
   - name: "DotR"
     startDate: "2026-01-01"
