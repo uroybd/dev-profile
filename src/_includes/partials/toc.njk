@@ -1,0 +1,41 @@
+<div id="toc-wrap">
+  <button id="toc-toggle" aria-label="Toggle table of contents">Contents</button>
+  <nav id="toc-panel" aria-label="Table of contents">
+    <ul>
+      {% if resume.skills %}<li><a href="#skills">Skills</a></li>{% endif %}
+      {% if resume.work %}<li><a href="#work">Work</a></li>{% endif %}
+      {% if resume.references %}<li><a href="#references">References</a></li>{% endif %}
+      {% if resume.projects %}<li><a href="#projects">Projects</a></li>{% endif %}
+      {% if resume.volunteer %}<li><a href="#volunteer">Open Source</a></li>{% endif %}
+      {% if resume.languages %}<li><a href="#languages">Languages</a></li>{% endif %}
+      {% if resume.interests %}<li><a href="#interests">Interests</a></li>{% endif %}
+    </ul>
+  </nav>
+</div>
+<script>
+(function() {
+  var panel = document.getElementById('toc-panel');
+  var toggle = document.getElementById('toc-toggle');
+  if (!panel || !toggle) return;
+  if (window.innerWidth < 1200) panel.classList.add('toc-closed');
+  toggle.addEventListener('click', function() {
+    panel.classList.toggle('toc-closed');
+  });
+  if ('IntersectionObserver' in window) {
+    var links = Array.from(document.querySelectorAll('#toc-panel a[href^="#"]'));
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          links.forEach(function(a) { a.classList.remove('toc-active'); });
+          var active = document.querySelector('#toc-panel a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('toc-active');
+        }
+      });
+    }, { threshold: 0.3 });
+    links
+      .map(function(a) { return document.querySelector(a.getAttribute('href')); })
+      .filter(Boolean)
+      .forEach(function(el) { obs.observe(el); });
+  }
+})();
+</script>
