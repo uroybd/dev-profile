@@ -32,6 +32,31 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("md", (content) => content ? md.render(String(content)) : "");
   eleventyConfig.addFilter("mdInline", (content) => content ? md.renderInline(String(content)) : "");
 
+  eleventyConfig.addShortcode("jsonLd", (resume) => {
+    const { basics = {}, work = [], skills = [] } = resume;
+    const currentJob = work.find(j => !j.endDate);
+    const person = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: basics.name,
+      jobTitle: basics.label,
+      url: basics.website,
+      email: basics.email,
+    };
+    const profileUrls = (basics.profiles || []).map(p => p.url).filter(Boolean);
+    if (profileUrls.length) person.sameAs = profileUrls;
+    if (currentJob) {
+      person.worksFor = { "@type": "Organization", name: currentJob.name };
+      if (currentJob.website) person.worksFor.url = currentJob.website;
+    }
+    const knowsAbout = skills.flatMap(s => s.keywords || []);
+    if (knowsAbout.length) person.knowsAbout = knowsAbout;
+    if (basics.website) {
+      person.mainEntityOfPage = { "@type": "ProfilePage", "@id": basics.website };
+    }
+    return `<script type="application/ld+json">\n${JSON.stringify(person, null, 2)}\n</script>`;
+  });
+
   eleventyConfig.addShortcode("icon", (name, extraClass) => {
     const attrs = extraClass ? { class: extraClass } : {};
     return iconToSvg(name, attrs);
