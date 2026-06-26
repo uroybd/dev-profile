@@ -96,15 +96,15 @@ references:
       Beyond his technical expertise, Utsob played a vital role in shaping the culture and process of COdesign's technology division— building frameworks, mentoring talent,
       and laying the foundation for a more structured and scalable tech ecosystem. He consistently exemplified a solution-oriented mindset that significantly contributed to our growth and stability.
 work:
-  - summary: >
-      Lead core platform architecture and engineering squads for a multi-tenant logistics SaaS, orchestrating complex
-      B2B, P2P, and first/last-mile fulfillment networks. Responsible for driving systemic database optimizations,
-      high-throughput telemetry pipelines, and federated third-party fleet integration frameworks.
+  - name: "FULFLLD, Inc."
     website: "https://fulflld.com"
-    name: "FULFLLD, Inc."
     location: "New York (Remote)"
     position: "Engineering Manager"
     startDate: "2024-11-15"
+    summary: >
+      Lead core platform architecture and engineering squads for a multi-tenant logistics SaaS, orchestrating complex
+      B2B, P2P, and first/last-mile fulfillment networks. Responsible for driving systemic database optimizations,
+      high-throughput telemetry pipelines, and federated third-party fleet integration frameworks.
     highlights:
       - "**Architectural Modernization:** Engineered the architectural migration of legacy JavaScript proof-of-concept (POC) codebases to Go, drastically optimizing runtime memory consumption and enforcing strict type safety across core services."
       - "**High-Performance Scaling:** Re-engineered the core Orders API architecture and optimized **MongoDB** document schemas and indexing strategies, expanding instantaneous payload capacity from ~700 to 10,000+ concurrent orders without performance degradation."
@@ -115,7 +115,13 @@ work:
       - "**Distributed Architecture:** Implemented a decoupled Task Consumer design pattern utilizing **RabbitMQ** to offload long-running operations out of the critical request-response lifecycle, maximizing platform uptime and background processing throughput."
       - "**Enterprise Search Systems:** Deployed an advanced server-side order search layer leveraging MongoDB Atlas, enabling complex multi-attribute indexing and low-latency querying across multi-modal delivery data."
       - "**Technical Governance & Leadership:** Guided cross-functional sprint teams by authoring detailed technical specifications for platform revamps and establishing a telemetry review framework to systematically catalog and eliminate weekly operational bugs."
-  - summary: >
+  - name: "COdesign Ltd."
+    website: "https://co.design"
+    location: "Dhaka"
+    position: "Technology Director"
+    startDate: "2017-02-04"
+    endDate: "2024-11-14"
+    summary: >
       Directed the technology division of an architectural digital design agency, treating software engineering 
       as a structural design discipline. Shaped the company's technical culture and operational SDLC from the ground up—building 
       highly scalable architectural frameworks, mentoring engineering talent, and establishing a resilient, 
@@ -125,21 +131,18 @@ work:
       - "**Engineering Excellence & SDLC Optimization:** Instituted comprehensive automated testing practices and modern CI/CD pipelines that accelerated operational velocity, reducing end-to-end software development time by 33%; engineered a unified workflow spanning from initial client pitch to production delivery while introducing peer code reviews and structural learning frameworks to maximize cross-team engineering quality."
       - "**Resource-Optimized Enterprise Architecture:** Spearheaded the design and architecture of BRAC's flagship institutional e-learning platform utilizing **Django** and **Vue.js**; engineered an advanced multi-format course creation dashboard and adaptive question bank infrastructure that reliably sustains 90,000+ active users while operating with extreme efficiency on a single, lean 4GB RAM / 2 vCPU node."
       - "**Open-Source Culture & Tooling Advocacy:** Spearheaded a foundational cultural shift toward open-source innovation within the organization, orchestrating the development and public release of high-utility developer tools and architectural utilities; successfully established the engineering team as active ecosystem contributors while delivering robust packages widely utilized across the industry."
-    website: "https://co.design"
-    name: "COdesign Ltd."
-    location: "Dhaka"
-    position: "Technology Director"
-    startDate: "2017-02-04"
-    endDate: "2024-11-14"
-  - summary: "Worked as DevOps engineer to build financial application and manage the on-premise servers."
-    name: "Panacea Systems Ltd."
+  - name: "Panacea Systems Ltd."
     location: "Dhaka"
     position: "DevOps Programmer"
     startDate: "2015-06-01"
     endDate: "2016-09-30"
+    summary: >
+      Joined as a foundational DevOps engineer within a fast-paced fintech environment, taking ownership of on-premise 
+      infrastructure virtualization, automated environment provisioning, and conversational service layer development.
     highlights:
       - "**Private Cloud Infrastructure:** Engineered and provisioned an in-house, bare-metal private cloud infrastructure leveraging **OpenStack**; successfully abstracted underlying server hardware to establish a scalable, virtualized deployment environment for all production workloads."
       - "**Conversational Interface & NLP Engineering:** Engineered an intelligent, NLP-driven conversational chatbot integrated with the Facebook Messenger API; implemented intent parsing and contextual classification to systematically map unstructured user dialogue into a dynamic, localized restaurant recommendation engine."
+      - "**Automated Platform Deployment:** Designed isolated environment profiles and continuous deployment configurations, allowing core fintech application layers to be securely compiled, tested, and shipped onto local virtualized cloud nodes with minimal manual intervention."
 projects:
   - name: "DotR"
     startDate: "2026-01-01"
