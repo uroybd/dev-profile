@@ -32,6 +32,9 @@ skills:
       - "Python"
       - "Dart"
       - "HTML and Derivatives"
+      - Java
+      - Kotlin
+      - Clojure
   - name: "Cloud & DevOps"
     level: "Senior"
     keywords:
