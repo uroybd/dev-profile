@@ -223,12 +223,8 @@ section#info {
 
 #work-list,
 #volunteer-list {
-  columns: 2;
+  columns: 1;
   gap: 2rem;
-
-  @media (max-width: 768px) {
-    columns: 1;
-  }
 
   .work-item {
     padding-top: 2rem;
