@@ -97,31 +97,40 @@ references:
       and laying the foundation for a more structured and scalable tech ecosystem. He consistently exemplified a solution-oriented mindset that significantly contributed to our growth and stability.
 work:
   - summary: >
-      Working at a next-gen delivery and logistic management SaaS that caters to complex needs of diverse customer groups
-      and allows inter-vendor delivery management.
+      Lead core platform architecture and engineering squads for a multi-tenant logistics SaaS, orchestrating complex
+      B2B, P2P, and first/last-mile fulfillment networks. Responsible for driving systemic database optimizations,
+      high-throughput telemetry pipelines, and federated third-party fleet integration frameworks.
     website: "https://fulflld.com"
     name: "FULFLLD, Inc."
     location: "New York (Remote)"
     position: "Engineering Manager"
     startDate: "2024-11-15"
     highlights:
-      - "Engineered the architectural migration of legacy JavaScript proof-of-concept (POC) codebases to Go, drastically optimizing runtime memory consumption and type safety."
-      - "Designed and deployed highly available, decoupled distributed microservices to orchestrate high-throughput background tasks and scheduled cron layers."
-      - "Architected a proprietary bulk-route optimization algorithm, successfully reducing computational complexity from $O(n)$ to $O(1)$ to unlock instantaneous multi-vendor logistics generation."
-      - "Maintained continuous system health by enforcing rigorous test-driven development (TDD), security compliance protocols, and modern CI/CD pipelines."
+      - "**Architectural Modernization:** Engineered the architectural migration of legacy JavaScript proof-of-concept (POC) codebases to Go, drastically optimizing runtime memory consumption and enforcing strict type safety across core services."
+      - "**High-Performance Scaling:** Re-engineered the core Orders API architecture and optimized **MongoDB** document schemas and indexing strategies, expanding instantaneous payload capacity from ~700 to 10,000+ concurrent orders without performance degradation."
+      - "**Multi-Tenant Fulfillment Brokerage:** Architected a federated workspace framework enabling enterprise B2B merchants to orchestrate mixed-fleet operations, allowing them to seamlessly manage internal delivery networks or dynamically broker demand to third-party providers (e.g., Uber) from a unified platform."
+      - "**Automated Fleet Dispatching:** Devised a multi-driver bulk routing engine that collapsed manual, order-by-order logistics coordination into an automated, single-action execution system—instantly grouping and distributing thousands of pending orders into optimized delivery paths based on real-time driver availability."
+      - "**Geospatial Verification Engines:** Re-engineered the 'driver nearby' proximity validation engine, implementing advanced geospatial indexing to automatically verify vehicle presence within pickup and delivery geofences, providing auditable verification data that resolved customer disputes and late-delivery claims."
+      - "**Real-Time Telemetry Systems:** Architected driver location tracking and historical order transit trails using **MongoDB Time Series** collections, significantly reducing database storage overhead while enabling high-throughput ingestion and deep operational traceability."
+      - "**Distributed Architecture:** Implemented a decoupled Task Consumer design pattern utilizing **RabbitMQ** to offload long-running operations out of the critical request-response lifecycle, maximizing platform uptime and background processing throughput."
+      - "**Enterprise Search Systems:** Deployed an advanced server-side order search layer leveraging MongoDB Atlas, enabling complex multi-attribute indexing and low-latency querying across multi-modal delivery data."
+      - "**Technical Governance & Leadership:** Guided cross-functional sprint teams by authoring detailed technical specifications for platform revamps and establishing a telemetry review framework to systematically catalog and eliminate weekly operational bugs."
   - summary: >
-      In between starting as a full-stack developer and leaving as a technology director, I managed and ensure growth for my team,
-      delivered premium products for high-paying clients on time, and established the best practices.
+      Directed the technology division of an architectural digital design agency, treating software engineering 
+      as a structural design discipline. Shaped the company's technical culture and operational SDLC from the ground up—building 
+      highly scalable architectural frameworks, mentoring engineering talent, and establishing a resilient, 
+      solution-oriented ecosystem that anchored long-term organizational stability and business growth.
+    highlights:
+      - "**Architectural Paradigm Shift:** Championed the migration of the organization's core client framework away from monolithic WordPress defaults to a decoupled **Django** and **Wagtail CMS** architecture paired with a **Vue.js** Server-Side Rendered (SSR) frontend; established a distinct market advantage by unlocking elite page-load velocities and flawless SEO compliance alongside a clean, clutter-free editing experience."
+      - "**Engineering Excellence & SDLC Optimization:** Instituted comprehensive automated testing practices and modern CI/CD pipelines that accelerated operational velocity, reducing end-to-end software development time by 33%; engineered a unified workflow spanning from initial client pitch to production delivery while introducing peer code reviews and structural learning frameworks to maximize cross-team engineering quality."
+      - "**Resource-Optimized Enterprise Architecture:** Spearheaded the design and architecture of BRAC's flagship institutional e-learning platform utilizing **Django** and **Vue.js**; engineered an advanced multi-format course creation dashboard and adaptive question bank infrastructure that reliably sustains 90,000+ active users while operating with extreme efficiency on a single, lean 4GB RAM / 2 vCPU node."
+      - "**Open-Source Culture & Tooling Advocacy:** Spearheaded a foundational cultural shift toward open-source innovation within the organization, orchestrating the development and public release of high-utility developer tools and architectural utilities; successfully established the engineering team as active ecosystem contributors while delivering robust packages widely utilized across the industry."
     website: "https://co.design"
     name: "COdesign Ltd."
     location: "Dhaka"
     position: "Technology Director"
     startDate: "2017-02-04"
     endDate: "2024-11-14"
-    highlights:
-      - "Directed cross-functional engineering squads to guarantee predictable, on-time lifecycle delivery of enterprise-grade software products for premium global clients."
-      - "Standardized engineering processes, unified internal knowledge architectures, and instituted technical training tracks to systematically scale team operational velocity."
-      - "Pioneered a company-wide initiative for upstream open-source contribution, transforming the internal engineering culture to align with global development standards."
   - summary: "Worked as DevOps engineer to build financial application and manage the on-premise servers."
     name: "Panacea Systems Ltd."
     location: "Dhaka"
@@ -129,8 +138,8 @@ work:
     startDate: "2015-06-01"
     endDate: "2016-09-30"
     highlights:
-      - "Architected, provisioned, and maintained highly available, bare-metal on-premise OpenStack cloud environments."
-      - "Developed secure, deterministic financial applications tailored for low-overhead, multi-vendor communication pipelines."
+      - "**Private Cloud Infrastructure:** Engineered and provisioned an in-house, bare-metal private cloud infrastructure leveraging **OpenStack**; successfully abstracted underlying server hardware to establish a scalable, virtualized deployment environment for all production workloads."
+      - "**Conversational Interface & NLP Engineering:** Engineered an intelligent, NLP-driven conversational chatbot integrated with the Facebook Messenger API; implemented intent parsing and contextual classification to systematically map unstructured user dialogue into a dynamic, localized restaurant recommendation engine."
 projects:
   - name: "DotR"
     startDate: "2026-01-01"
