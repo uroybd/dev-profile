@@ -161,7 +161,11 @@ languages:
   - language: "English"
     fluency: "Advanced"
 interests:
-  - name: "Reading"
+  - name: "Critical Reading"
     keywords:
-      - "Everything except YA"
+      - "Active Reading"
+      - "Marginalia & Annotation"
+      - "Critical Thinking"
+      - "Synthesis & Prose"
+      - "All genre except YA"
   - name: "Open Source"
