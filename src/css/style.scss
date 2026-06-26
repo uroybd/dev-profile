@@ -123,6 +123,19 @@ section#info {
   }
 }
 
+.lang-interests-row {
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  section {
+    flex: 1;
+  }
+}
+
 #languages-list {
   display: flex;
   flex-wrap: wrap;

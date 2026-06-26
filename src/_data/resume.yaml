@@ -5,9 +5,13 @@ basics:
   name: "Utsob Roy"
   label: "Polyglot Programmer & System Architect"
   image: "src/images/avatar-transparent.png"
-  summary: "Systems software engineer and applied logician specializing in platform architecture and high-performance infrastructure. Backed by over a decade of experience designing deterministic execution states, optimizing high-velocity core platforms, and automating low-overhead distributed layers. Driven by absolute structural precision, I focus on engineering clean, scalable systems from first principles to achieve maximum runtime efficiency and operational velocity."
+  summary: >
+    Systems software engineer and applied logician specializing in platform architecture and high-performance infrastructure.
+    Backed by over a decade of experience designing deterministic execution states, optimizing high-velocity core platforms,
+    and automating low-overhead distributed layers. Driven by absolute structural precision, I focus on engineering clean,
+    scalable systems from first principles to achieve maximum runtime efficiency and operational velocity.
   website: "https://utsob.me"
-  url: "https://ajaxdavis.dev"
+  url: "https://utsob.me"
   email: "connect@utsob.me"
   location:
     city: "Dhaka"
@@ -46,7 +50,7 @@ skills:
       - "System Design"
       - "API Design"
       - "Microservices"
-      - "Real-time Systems (Pusher / Yjs)"
+      - "Real-time Systems"
       - "CLI Tools"
       - "Open Source Maintenance"
   - name: "Frameworks"
@@ -81,7 +85,9 @@ volunteer:
       - "Implemented an automated image optimization pipeline and native GitHub Gist embedding to drastically lower page weight and streamline technical documentation workflows."
 references:
   - name: "Amit Richard, CEO of COdesign Ltd."
-    reference: "Beyond his technical expertise, Utsob played a vital role in shaping the culture and process of COdesign's technology division—building frameworks, mentoring talent, and laying the foundation for a more structured and scalable tech ecosystem. He consistently exemplified a solution-oriented mindset that significantly contributed to our growth and stability."
+    reference: >
+      Beyond his technical expertise, Utsob played a vital role in shaping the culture and process of COdesign's technology division— building frameworks, mentoring talent,
+      and laying the foundation for a more structured and scalable tech ecosystem. He consistently exemplified a solution-oriented mindset that significantly contributed to our growth and stability.
 work:
   - summary: >
       Working at a next-gen delivery and logistic management SaaS that caters to complex needs of diverse customer groups
@@ -94,7 +100,7 @@ work:
     highlights:
       - "Ported a significant amount of JS code from the POC to Golang, enhancing it on the way."
       - "Implemented microservices for tasks and crons."
-      - "Architected and implemented Bulk-route optimization."
+      - "Architected and implemented Bulk-route optimization reducing route creation complexity from O(n) to O(1)"
       - "Manage project health by enforcing testing, security standards, and best practices."
   - summary: >
       In between starting as a full-stack developer and leaving as a technology director, I managed and ensure growth for my team,
@@ -121,30 +127,33 @@ work:
 projects:
   - name: "DotR"
     startDate: "2026-01-01"
-    description: "A high-performance dotfiles manager built with Rust, designed for complex, multi-environment configuration workflows. Features native template engine support, profile-based dependency management, and secure interactive secrets handling."
+    description: >
+      A high-performance dotfiles manager built with Rust, designed for complex, multi-environment configuration workflows.
+      Features native template engine support, profile-based dependency management, and secure interactive secrets handling.
     highlights:
-      - "Engineered with Rust to ensure system stability and performance"
+      - "Built with Rust to provide a no-dependency high-performance single-binary option"
       - "Supports environment-specific profiles (work, home, server) with granular dependency tracking"
       - "Implements dynamic configuration using the Tera templating engine and custom pre/post-deployment hooks"
       - "Advanced CLI features including dry-run mode, diff-visualization, and automated orphaned-package cleanup"
+      - "Allows both symlinking and copying for deployment"
     website: "https://github.com/uroybd/DotR"
   - name: "BooxRichAnnotations"
     startDate: "2026-06-15"
-    description: "A specialized native Android application engineered for Onyx Boox devices to extract and export complex reading annotations. Bypasses standard limitations by interacting directly with the proprietary NeoReader system content providers."
+    description: >
+      A specialized native Android application engineered for Onyx Boox devices to extract and export complex reading annotations.
+      Bypasses standard limitations by interacting directly with the proprietary NeoReader system content providers.
     highlights:
       - "Reverse-engineered Onyx content provider databases to extract rich metadata, including annotation color, style (wavy/dashed), and placement"
-      - "Implemented a custom deduplication engine to resolve annotation conflicts and versioning during export"
       - "Developed a flexible export pipeline supporting JSON, CSV, and user-defined Markdown templates via the Pebble engine"
       - "Optimized UI for E-ink displays with a zero-animation, high-contrast, pure black-and-white interface"
     website: "https://github.com/uroybd/BooxRichAnnotations"
   - name: "EpubPress Web Client"
     startDate: "2024-10-01"
-    description: "A platform-agnostic web application that scales EpubPress functionality to mobile browsers, enabling users to bundle multi-tab web articles into clean, ad-free e-books without requiring a desktop browser extension."
+    description: >
+      A platform-agnostic web application that scales EpubPress functionality to mobile browsers, enabling users to bundle multi-tab web articles into clean,
+      ad-free e-books without requiring a desktop browser extension.
     highlights:
       - "Eliminated client-side extension barriers by building a mobile-responsive web alternative, allowing e-reader users to aggregate content directly from iOS or Android devices"
-      - "Drove significant community engagement and organic adoption across specialized hardware forums, including r/ereader and r/Onyx_Boox, by solving mobile parsing limitations"
-      - "Engineered a high-efficiency URL batch processing workflow that extracts, sanitizes, and bundles web content into valid EPUB files in a single click"
-      - "Designed a clean, minimalist UI optimized for low-friction text input and instantaneous download delivery"
     website: "https://github.com/uroybd/epubpress-web"
 languages:
   - language: "Bengali"

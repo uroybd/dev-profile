@@ -388,16 +388,18 @@ function render(resume) {
     ${volunteerHtml}
   </div>` : ""}
 
-  ${languages.length ? `
-  <div class="section">
-    <h3>Languages</h3><hr>
-    <div class="lang-list">${languagesHtml}</div>
-  </div>` : ""}
-
-  ${interests.length ? `
-  <div class="section">
-    <h3>Interests</h3><hr>
-    <div class="interest-list">${interestsHtml}</div>
+  ${(languages.length || interests.length) ? `
+  <div style="display:flex;gap:2rem;align-items:flex-start;">
+    ${languages.length ? `
+    <div class="section" style="flex:1;">
+      <h3>Languages</h3><hr>
+      <div class="lang-list">${languagesHtml}</div>
+    </div>` : ""}
+    ${interests.length ? `
+    <div class="section" style="flex:1;">
+      <h3>Interests</h3><hr>
+      <div class="interest-list">${interestsHtml}</div>
+    </div>` : ""}
   </div>` : ""}
 
 </body>
