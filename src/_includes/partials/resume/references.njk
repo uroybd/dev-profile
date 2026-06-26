@@ -1,0 +1,16 @@
+{% if resume.references %}
+<section id="references" class="resume-section">
+  <h3 class="section-title">References</h3>
+  <hr />
+  <div id="references-list">
+  {% for ref in resume.references %}
+  <figure class="reference-item">
+    <blockquote class="reference-quote">
+      <p>{{ ref.reference }}</p>
+    </blockquote>
+    <figcaption class="reference-name">— {{ ref.name }}</figcaption>
+  </figure>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}

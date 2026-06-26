@@ -301,6 +301,37 @@ section#info {
   line-height: 1.8;
 }
 
+#references-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reference-item {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--color-accent);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.reference-quote {
+  margin: 0 0 0.75rem;
+
+  p {
+    margin: 0;
+    line-height: 1.7;
+    font-style: italic;
+  }
+}
+
+.reference-name {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  font-weight: 400;
+  text-align: right;
+  display: block;
+}
+
 a:has(footer) {
   display: block;
   text-decoration: none;

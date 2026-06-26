@@ -43,7 +43,7 @@ function pills(keywords) {
 }
 
 function render(resume) {
-  const { basics = {}, skills = [], work = [], volunteer = [], projects = [], languages = [], interests = [] } = resume;
+  const { basics = {}, skills = [], work = [], volunteer = [], projects = [], languages = [], interests = [], references = [] } = resume;
 
   const profiles = (basics.profiles || []).map(p => {
     const label = p.username || p.url;
@@ -124,6 +124,12 @@ function render(resume) {
       <span class="lang-name">${i.name}</span>
       ${pills(i.keywords)}
     </div>`).join("");
+
+  const referencesHtml = references.map(r => `
+    <figure class="reference-item">
+      <blockquote class="reference-quote"><p>${r.reference}</p></blockquote>
+      <figcaption class="reference-name">— ${r.name}</figcaption>
+    </figure>`).join("");
 
   const css = `
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
@@ -301,6 +307,34 @@ function render(resume) {
       word-break: break-all;
     }
 
+    .reference-item {
+      margin: 0 0 1rem;
+      padding: 0.9rem 1.25rem;
+      border-left: 3px solid var(--accent);
+      background: rgba(0, 0, 0, 0.03);
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .reference-quote {
+      margin: 0 0 0.5rem;
+    }
+
+    .reference-quote p {
+      margin: 0;
+      line-height: 1.6;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .reference-name {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 400;
+      text-align: right;
+      display: block;
+    }
+
   `;
 
   return `<!DOCTYPE html>
@@ -336,16 +370,22 @@ function render(resume) {
     ${workHtml}
   </div>` : ""}
 
-  ${volunteer.length ? `
+  ${references.length ? `
   <div class="section">
-    <h3>Open Source Contributions</h3><hr>
-    ${volunteerHtml}
+    <h3>References</h3><hr>
+    ${referencesHtml}
   </div>` : ""}
 
   ${projects.length ? `
   <div class="section">
     <h3>Projects</h3><hr>
     ${projectsHtml}
+  </div>` : ""}
+
+  ${volunteer.length ? `
+  <div class="section">
+    <h3>Open Source Contributions</h3><hr>
+    ${volunteerHtml}
   </div>` : ""}
 
   ${languages.length ? `

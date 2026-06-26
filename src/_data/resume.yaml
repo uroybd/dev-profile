@@ -79,6 +79,9 @@ volunteer:
       - "Optimized the client-side local and global graph rendering engine, significantly reducing calculation overhead and improving smoothness for large personal knowledge bases."
       - "Engineered an advanced content transclusion (note embedding) framework with robust deep-linking, enabling precise content reuse and seamless jump-to-source navigation."
       - "Implemented an automated image optimization pipeline and native GitHub Gist embedding to drastically lower page weight and streamline technical documentation workflows."
+references:
+  - name: "Amit Richard, CEO of COdesign Ltd."
+    reference: "Beyond his technical expertise, Utsob played a vital role in shaping the culture and process of COdesign's technology division—building frameworks, mentoring talent, and laying the foundation for a more structured and scalable tech ecosystem. He consistently exemplified a solution-oriented mindset that significantly contributed to our growth and stability."
 work:
   - summary: >
       Working at a next-gen delivery and logistic management SaaS that caters to complex needs of diverse customer groups
