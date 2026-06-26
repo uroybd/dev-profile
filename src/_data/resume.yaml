@@ -169,3 +169,8 @@ interests:
       - "Synthesis & Prose"
       - "All genre except YA"
   - name: "Open Source"
+    keywords:
+      - "Upstream Contributions"
+      - "Developer Tooling"
+      - "Plugin Architecture"
+      - "Community Maintenance"
