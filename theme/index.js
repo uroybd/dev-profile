@@ -289,9 +289,13 @@ function render(resume) {
     }
 
     .col-item {
-      // break-inside: avoid;
-      // page-break-inside: avoid;
       margin-bottom: 1.25rem;
+    }
+
+    .col-item h4, .section h3, .section hr {
+      break-after: avoid;
+      page-break-after: avoid;
+      -webkit-column-break-after: avoid;
     }
 
     .item-header {
@@ -453,16 +457,6 @@ function render(resume) {
   }
 
   ${
-    references.length
-      ? `
-  <div class="section" id="section-references">
-    <h3>References</h3><hr>
-    ${referencesHtml}
-  </div>`
-      : ""
-  }
-
-  ${
     projects.length
       ? `
   <div class="section" id="section-projects">
@@ -504,6 +498,16 @@ function render(resume) {
     </div>`
         : ""
     }
+  </div>`
+      : ""
+  }
+
+  ${
+    references.length
+      ? `
+  <div class="section" id="section-references">
+    <h3>References</h3><hr>
+    ${referencesHtml}
   </div>`
       : ""
   }

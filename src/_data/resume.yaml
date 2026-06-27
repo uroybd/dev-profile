@@ -6,10 +6,11 @@ basics:
   label: "Polyglot Programmer & System Architect"
   image: "src/images/avatar-transparent.png"
   summary: >
-    Systems software engineer and applied logician specializing in platform architecture and high-performance infrastructure.
-    Backed by over a decade of experience designing deterministic execution states, optimizing high-velocity core platforms,
-    and automating low-overhead distributed layers. Driven by absolute structural precision, I focus on engineering clean,
-    scalable systems from first principles to achieve maximum runtime efficiency and operational velocity.
+    Systems software engineer, technical leader, and applied logician specializing in platform architecture, 
+    distributed systems, and infrastructure governance. Backed by over a decade of experience steering 
+    engineering divisions, designing deterministic execution states, and migrating legacy architectures to 
+    high-velocity core platforms. Driven by absolute structural precision, I focus on engineering clean, 
+    resilient systems from first principles to achieve maximum runtime efficiency and operational velocity.
   website: "https://utsob.me"
   url: "https://utsob.me"
   email: "connect@utsob.me"
