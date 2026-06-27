@@ -90,6 +90,16 @@ volunteer:
       - "Optimized the client-side local and global graph rendering engine, significantly reducing calculation overhead and improving smoothness for large personal knowledge bases."
       - "Engineered an advanced content transclusion (note embedding) framework with robust deep-linking, enabling precise content reuse and seamless jump-to-source navigation."
       - "Implemented an automated image optimization pipeline and native GitHub Gist embedding to drastically lower page weight and streamline technical documentation workflows."
+  - organization: "howtocode.dev"
+    position: "Open Source Technical Author"
+    url: "https://sh.howtocode.dev"
+    startDate: "2014-08-01"
+    endDate: "2015-05-31"
+    summary: "Authored a comprehensive, open-source reference guide and interactive technical curriculum designed to demystify Unix shell scripting, POSIX compliance standards, and terminal-driven automation pipelines."
+    highlights:
+      - "Served as the primary technical author and curriculum architect, designing detailed technical modules spanning from basic stream manipulation to complex shell lifecycle execution."
+      - "Deconstructed fundamental operating system primitives—including I/O redirection pipelines, file descriptor tracking, signal traps, and asynchronous process orchestration—into clear programmatic guides."
+      - "Engineered a maintainable markdown-driven documentation layout within the open-source repository to encourage seamless community localization, syntax contributions, and upstream extensions."
 references:
   - name: "Amit Richard, CEO of COdesign Ltd."
     reference: >
@@ -175,6 +185,17 @@ projects:
     highlights:
       - "Eliminated client-side extension barriers by building a mobile-responsive web alternative, allowing e-reader users to aggregate content directly from iOS or Android devices"
     website: "https://github.com/uroybd/epubpress-web"
+  - name: "e-Boipotro"
+    startDate: "2014-02-01"
+    description: >
+      An open-access digital preservation platform and zero-infrastructure catalog engineered to bridge localized 
+      content scarcity by converting legacy, poorly-scanned image PDFs of public-domain Bangla literature into 
+      highly accessible, semantic digital formats.
+    highlights:
+      - "Structurally compiled and curated 246+ handcrafted, reflowable EPUB publications built with strict formatting guidelines, embedded typographic hierarchy, and rich bibliographic metadata"
+      - "Implemented an OPDS (Open Publication Distribution System) feed XML schema, enabling seamless metadata syndication, remote discovery, and native library integration for modern external e-reader software"
+      - "Architected a high-efficiency, serverless static web application featuring modular read-in-browser parsing alongside decoupling layer mechanics for fast, reliable direct file downloads"
+    website: "https://eboipotro.github.io/"
 languages:
   - language: "Bengali"
     fluency: "Native"
