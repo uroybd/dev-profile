@@ -14,7 +14,7 @@ basics:
   url: "https://utsob.me"
   email: "connect@utsob.me"
   location:
-    city: "Dhaka"
+    city: "Dhaka (Open to Relocation to EU)"
     countryCode: "BD"
   profiles:
     - url: "https://github.com/uroybd"
@@ -24,7 +24,7 @@ basics:
       url: "https://www.linkedin.com/in/uroybd"
       network: "linkedin"
 skills:
-  - name: "Languages"
+  - name: "Programming Languages"
     keywords:
       - "Rust"
       - "Go"
@@ -32,9 +32,9 @@ skills:
       - "Python"
       - "Dart"
       - "HTML and Derivatives"
-      - Java
-      - Kotlin
-      - Clojure
+      - "Java"
+      - "Kotlin"
+      - "Clojure"
   - name: "Cloud & DevOps"
     keywords:
       - "AWS"
@@ -79,14 +79,14 @@ volunteer:
     url: "https://koreader.rocks"
     summary: "Contributed to the ecosystem of a high-performance, cross-platform document viewer specialized for e-ink devices, focusing on annotation data portability."
     highlights:
-      - "Spearheaded a comprehensive revamp of the core highlight export plugin to optimize data structure and reliability for reader annotations."
+      - "Spearheaded a comprehensive revamp of the core highlight export plugin written in **Lua** to optimize data structure and reliability for reader annotations."
       - "Enhanced export workflow compatibility with modern personal knowledge management (PKM) platforms by improving Markdown and text parsing outputs."
   - organization: "Obsidian Digital Garden"
     position: "Open Source Contributor"
     url: "https://github.com/oleeskild/obsidian-digital-garden"
     summary: "Contributed major architectural enhancements and core features to the leading open-source publishing plugin that enables users to compile and host local Markdown vaults as static digital gardens."
     highlights:
-      - "Architected an extensible system for loading dynamic components, allowing end-users to seamlessly inject and render custom interactive elements within their published notes."
+      - "Architected an extensible system within **TypeScript** for loading dynamic components, allowing end-users to seamlessly inject and render custom interactive elements within their published notes."
       - "Optimized the client-side local and global graph rendering engine, significantly reducing calculation overhead and improving smoothness for large personal knowledge bases."
       - "Engineered an advanced content transclusion (note embedding) framework with robust deep-linking, enabling precise content reuse and seamless jump-to-source navigation."
       - "Implemented an automated image optimization pipeline and native GitHub Gist embedding to drastically lower page weight and streamline technical documentation workflows."
@@ -136,10 +136,10 @@ work:
       highly scalable architectural frameworks, mentoring engineering talent, and establishing a resilient, 
       solution-oriented ecosystem that anchored long-term organizational stability and business growth.
     highlights:
-      - "**Architectural Paradigm Shift:** Championed the migration of the organization's core client framework away from monolithic WordPress defaults to a decoupled **Django** and **Wagtail CMS** architecture paired with a **Vue.js** Server-Side Rendered (SSR) frontend; established a distinct market advantage by unlocking elite page-load velocities and flawless SEO compliance alongside a clean, clutter-free editing experience."
+      - "**Architectural Paradigm Shift:** Championed the migration of the organization's core client framework away from monolithic WordPress defaults to a decoupled **Django (Python)** and **Wagtail CMS** architecture paired with a **Vue.js** Server-Side Rendered (SSR) frontend; established a distinct market advantage by unlocking elite page-load velocities and flawless SEO compliance alongside a clean, clutter-free editing experience."
+      - "**Supply Chain Compliance & Certification Platforms:** Engineered a highly complex factory safety, workshop tracking, and certification platform for BRAC; architected a data-driven framework managing multi-tiered enrollment (corporate staff and factory laborers), cascading train-the-trainer workshop tracking pipelines, and automated auditing tools to formally certify industrial facilities for international buyer compliance verification."
       - "**Engineering Excellence & SDLC Optimization:** Instituted comprehensive automated testing practices and modern CI/CD pipelines that accelerated operational velocity, reducing end-to-end software development time by 33%; engineered a unified workflow spanning from initial client pitch to production delivery while introducing peer code reviews and structural learning frameworks to maximize cross-team engineering quality."
-      - "**Resource-Optimized Enterprise Architecture:** Spearheaded the design and architecture of BRAC's flagship institutional e-learning platform utilizing **Django** and **Vue.js**; engineered an advanced multi-format course creation dashboard and adaptive question bank infrastructure that reliably sustains 90,000+ active users while operating with extreme efficiency on a single, lean 4GB RAM / 2 vCPU node."
-      - "**Supply Chain Compliance & Certification Platforms:** Engineered a comprehensive factory safety, training tracking, and auditing platform for BRAC; architected a robust framework managing multi-tiered enrollment (corporate staff and factory laborers), cascading train-the-trainer workshop tracking pipelines, and automated auditing tools to formally certify industrial facilities for international buyer compliance verification."
+      - "**Resource-Optimized Enterprise Architecture:** Spearheaded the design and architecture of BRAC's flagship institutional e-learning platform utilizing **Django (Python)** and **Vue.js**; engineered an advanced multi-format course creation dashboard and adaptive question bank infrastructure that reliably sustains 90,000+ active users while operating with extreme efficiency on a single, lean 4GB RAM / 2 vCPU node."
       - "**Open-Source Culture & Tooling Advocacy:** Spearheaded a foundational cultural shift toward open-source innovation within the organization, orchestrating the development and public release of high-utility developer tools and architectural utilities; successfully established the engineering team as active ecosystem contributors while delivering robust packages widely utilized across the industry."
       - "**Design Systems & Enterprise Frontend Engineering:** Directed cross-functional development and UI/UX squads to deliver premium digital platforms for high-profile global and national brands; spearheaded the development of **Bata’s** global UI guidelines, orchestrated the pioneering first-of-its-kind localization and framework implementation of **Toyota's** global UI standards for Toyota Bangladesh, and led the complete platform frontend modernization for **Prothom Alo**."
   - name: "Panacea Systems Ltd."
@@ -175,7 +175,7 @@ projects:
     highlights:
       - "Reverse-engineered Onyx content provider databases to extract rich metadata, including annotation color, style (wavy/dashed), and placement"
       - "Developed a flexible export pipeline supporting JSON, CSV, and user-defined Markdown templates via the Pebble engine"
-      - "Optimized UI for E-ink displays with a zero-animation, high-contrast, pure black-and-white interface"
+      - "Optimized UI for E-ink displays with a zero-animation, high-contrast, pure black-and-white interface built with **Kotlin**"
     website: "https://github.com/uroybd/BooxRichAnnotations"
   - name: "EpubPress Web Client"
     startDate: "2024-10-01"
@@ -202,13 +202,12 @@ languages:
   - language: "English"
     fluency: "Advanced"
 interests:
-  - name: "Critical Reading"
+  - name: "Systemic Reading & Personal Knowledge Management (PKM)"
     keywords:
-      - "Active Reading"
-      - "Marginalia & Annotation"
-      - "Critical Thinking"
-      - "Synthesis & Prose"
-      - "All genre except YA"
+      - "Active Reading & Marginalia"
+      - "Text Synthesizing & Analytical Prose"
+      - "Epistemology & Epistemic Logic"
+      - "Technical & Philosophy Literature"
   - name: "Open Source"
     keywords:
       - "Upstream Contributions"
