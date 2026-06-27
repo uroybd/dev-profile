@@ -519,9 +519,14 @@ function render(resume) {
 }
 
 const pdfRenderOptions = {
-  margin: { top: "1.5cm", right: "2cm", bottom: "1.5cm", left: "2cm" },
+  margin: { top: "1.5cm", right: "2cm", bottom: "1.8cm", left: "2cm" },
   outline: true,
   mediaType: "print",
+  displayHeaderFooter: true,
+  headerTemplate: "<span></span>",
+  footerTemplate: `<div style="width:100%;text-align:center;font-size:9px;color:#888;font-family:Lato,sans-serif;padding-bottom:4px;">
+    <span class="pageNumber"></span> / <span class="totalPages"></span>
+  </div>`,
 };
 
 module.exports = { render, pdfRenderOptions };
