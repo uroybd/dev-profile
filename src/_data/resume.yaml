@@ -186,15 +186,6 @@ work:
       - "**Conversational Interface & NLP Engineering:** Engineered an intelligent, NLP-driven conversational chatbot integrated with the Facebook Messenger API; implemented intent parsing and contextual classification to systematically map unstructured user dialogue into a dynamic, localized restaurant recommendation engine."
       - "**Automated Platform Deployment:** Designed isolated environment profiles and continuous deployment configurations, allowing core fintech application layers to be securely compiled, tested, and shipped onto local virtualized cloud nodes with minimal manual intervention."
 projects:
-  - name: "Advent of Code Solutions"
-    startDate: "2020-12-01"
-    description: >
-      A dedicated Rust implementation repository focused on solving intricate algorithmic challenges, spatial geometry 
-      puzzles, and discrete mathematical problems using strict, zero-overhead compile-time execution mechanics.
-    highlights:
-      - "Engineered low-latency programmatic solutions to complex graph theory data structures, pathfinding optimization (A*/Dijkstra), dynamic programming arrays, and combinatorial puzzles utilizing **Rust**"
-      - "Designed custom bit-masking operations, static look-up structures, and type-safe parser states to guarantee absolute memory safety, blazing runtime efficiency, and zero garbage collection overhead"
-    website: "https://github.com/uroybd/AdventOfCode"
   - name: "DotR"
     startDate: "2026-01-01"
     description: >
@@ -225,6 +216,16 @@ projects:
     highlights:
       - "Eliminated client-side extension barriers by building a mobile-responsive web alternative, allowing e-reader users to aggregate content directly from iOS or Android devices"
     website: "https://github.com/uroybd/epubpress-web"
+  - name: "Advent of Code Solutions"
+    startDate: "2020-12-01"
+    description: >
+      A dedicated Rust implementation repository focused on engineering low-latency programmatic solutions to complex graph theory data structures, 
+      spatial geometry puzzles, and discrete mathematical problems using strict, zero-overhead execution mechanics.
+    highlights:
+      - "Engineered highly optimized graph traversal, pathfinding, and combinatorial puzzle engines in **Rust**, collapsing complex multi-dimensional data structures into high-velocity execution states."
+      - "Implemented advanced optimization techniques including **A* search** parameterized via **const generics** (2021/Day 23) and **bitmask state encoding** (2022/Day 16) to resolve massive multi-agent state spaces without joint enumeration overhead."
+      - "Leveraged computational geometry primitives—including **weighted inclusion-exclusion** (2021/Day 22) and **const fn** ray-casting (2025/Day 09)—while establishing a **Criterion benchmarking** pipeline to ensure execution under 1 ms."
+    website: "https://github.com/uroybd/AdventOfCode"
   - name: "e-Boipotro"
     startDate: "2014-02-01"
     description: >
