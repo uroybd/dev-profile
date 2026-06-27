@@ -53,6 +53,14 @@ skills:
       - "MongoDB"
       - "Redis"
       - "Elasticsearch"
+  - name: "Distributed Systems & Protocols" # NEW
+    keywords:
+      - "Event-Driven Architecture"
+      - "Message Brokers (RabbitMQ)"
+      - "RESTful API Design"
+      - "Asynchronous Processing"
+      - "Data Syndication (OPDS / XML)"
+      - "Pub/Sub Architectures"
   - name: "Architecture & Tooling"
     keywords:
       - "System Design"
@@ -61,6 +69,14 @@ skills:
       - "Real-time Systems"
       - "CLI Tools"
       - "Open Source Maintenance"
+  - name: "Systems Primitives & Automation" # NEW
+    keywords:
+      - "POSIX Standards"
+      - "Unix / Linux Systems"
+      - "Shell Scripting (Bash/Zsh)"
+      - "Process Orchestration"
+      - "Memory Management Optimization"
+      - "I/O Redirection Pipelines"
   - name: "Frameworks"
     keywords:
       - "Django"
@@ -73,23 +89,36 @@ skills:
       - "Electron"
       - "Tauri"
       - "Flutter"
+  - name: "Engineering Leadership & Governance" # NEW
+    keywords:
+      - "Technical Leadership"
+      - "Engineering Management"
+      - "SDLC Optimization"
+      - "Technical Specifications (RFCs)"
+      - "Team Mentorship & Culture"
+      - "Cross-Functional Governance"
+      - "Agile / Scrum Methodologies"
 volunteer:
   - organization: "KOReader"
     position: "Open Source Contributor"
     url: "https://koreader.rocks"
-    summary: "Contributed to the ecosystem of a high-performance, cross-platform document viewer specialized for e-ink devices, focusing on annotation data portability."
+    startDate: "2022-01-01"
+    summary: "Contributed core features, UI rendering components, and input subsystems to a high-performance, cross-platform document viewer optimized for E-ink hardware devices."
     highlights:
-      - "Spearheaded a comprehensive revamp of the core highlight export plugin written in **Lua** to optimize data structure and reliability for reader annotations."
-      - "Enhanced export workflow compatibility with modern personal knowledge management (PKM) platforms by improving Markdown and text parsing outputs."
+      - "Spearheaded a comprehensive revamp of the core highlight export plugin written in **Lua** to optimize data structures and reliability for reader annotations."
+      - "Designed and implemented an optimized, low-overhead graphical reading progress bar component for library items inside the grid-view UI, mitigating rendering cycles under restricted E-ink display refresh bounds."
+      - "Engineered and integrated the native Bengali Probhat virtual keyboard input layout mapping directly into the system application layer to expand regional user accessibility."
   - organization: "Obsidian Digital Garden"
     position: "Open Source Contributor"
     url: "https://github.com/oleeskild/obsidian-digital-garden"
-    summary: "Contributed major architectural enhancements and core features to the leading open-source publishing plugin that enables users to compile and host local Markdown vaults as static digital gardens."
+    startDate: "2023-06-01"
+    summary: "Contributed major architectural enhancements, metadata parsers, and core features to the leading open-source publishing plugin that compiles local Markdown vaults into static digital gardens."
     highlights:
       - "Architected an extensible system within **TypeScript** for loading dynamic components, allowing end-users to seamlessly inject and render custom interactive elements within their published notes."
+      - "Engineered an abstract path-rewriting middleware and slug-normalization framework to decouple local Markdown vault folder structures from public static layout URIs, enforcing routing permanence."
+      - "Implemented a unified global iconography metadata parser to dynamically resolve and execute custom icon injections natively across markdown content bodies, title blocks, and recursive file-tree navigation components."
       - "Optimized the client-side local and global graph rendering engine, significantly reducing calculation overhead and improving smoothness for large personal knowledge bases."
       - "Engineered an advanced content transclusion (note embedding) framework with robust deep-linking, enabling precise content reuse and seamless jump-to-source navigation."
-      - "Implemented an automated image optimization pipeline and native GitHub Gist embedding to drastically lower page weight and streamline technical documentation workflows."
   - organization: "howtocode.dev"
     position: "Open Source Technical Author"
     url: "https://sh.howtocode.dev"
@@ -155,6 +184,15 @@ work:
       - "**Conversational Interface & NLP Engineering:** Engineered an intelligent, NLP-driven conversational chatbot integrated with the Facebook Messenger API; implemented intent parsing and contextual classification to systematically map unstructured user dialogue into a dynamic, localized restaurant recommendation engine."
       - "**Automated Platform Deployment:** Designed isolated environment profiles and continuous deployment configurations, allowing core fintech application layers to be securely compiled, tested, and shipped onto local virtualized cloud nodes with minimal manual intervention."
 projects:
+  - name: "Advent of Code Solutions"
+    startDate: "2020-12-01"
+    description: >
+      A dedicated Rust implementation repository focused on solving intricate algorithmic challenges, spatial geometry 
+      puzzles, and discrete mathematical problems using strict, zero-overhead compile-time execution mechanics.
+    highlights:
+      - "Engineered low-latency programmatic solutions to complex graph theory data structures, pathfinding optimization (A*/Dijkstra), dynamic programming arrays, and combinatorial puzzles utilizing **Rust**"
+      - "Designed custom bit-masking operations, static look-up structures, and type-safe parser states to guarantee absolute memory safety, blazing runtime efficiency, and zero garbage collection overhead"
+    website: "https://github.com/uroybd/AdventOfCode"
   - name: "DotR"
     startDate: "2026-01-01"
     description: >
@@ -208,9 +246,10 @@ interests:
       - "Text Synthesizing & Analytical Prose"
       - "Epistemology & Epistemic Logic"
       - "Technical & Philosophy Literature"
-  - name: "Open Source"
+      - "Relational Cataloging Architecture (uroybd/Book-Base)"
+  - name: "Open Source & Competitive Logic"
     keywords:
       - "Upstream Contributions"
-      - "Developer Tooling"
-      - "Plugin Architecture"
+      - "Developer Tooling Architecture"
+      - "Algorithmic Puzzles & Graph Optimization"
       - "Community Maintenance"
