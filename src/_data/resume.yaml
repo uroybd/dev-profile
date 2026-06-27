@@ -36,6 +36,7 @@ skills:
       - "Java"
       - "Kotlin"
       - "Clojure"
+      - "Lua"
   - name: "Cloud & DevOps"
     keywords:
       - "AWS"
@@ -74,7 +75,7 @@ skills:
     keywords:
       - "POSIX Standards"
       - "Unix / Linux Systems"
-      - "Shell Scripting (Bash/Zsh)"
+      - "Shell Scripting (Bash/Zsh/Nushell)"
       - "Process Orchestration"
       - "Memory Management Optimization"
       - "I/O Redirection Pipelines"
