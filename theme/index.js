@@ -199,7 +199,7 @@ function render(resume) {
       (r) => `
     <figure class="reference-item">
       <blockquote class="reference-quote">${mdBlock(r.reference)}</blockquote>
-      <figcaption class="reference-name">— ${mdInline(r.name)}</figcaption>
+      <figcaption class="reference-name">— ${r.name ? r.name.split("\n").map((line) => mdInline(line)).join("<br>") : ""}</figcaption>
     </figure>`,
     )
     .join("");

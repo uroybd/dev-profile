@@ -8,7 +8,7 @@
     <blockquote class="reference-quote">
       {{ ref.reference | md | safe }}
     </blockquote>
-    <figcaption class="reference-name">— {{ ref.name }}</figcaption>
+    <figcaption class="reference-name">— {{ ref.name | replace("\n", "<br>") | safe }}</figcaption>
   </figure>
   {% endfor %}
   </div>
