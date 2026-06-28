@@ -61,7 +61,6 @@ skills:
       - "Message Brokers (RabbitMQ)"
       - "RESTful API Design"
       - "Asynchronous Processing"
-      - "Data Syndication (OPDS / XML)"
       - "Pub/Sub Architectures"
   - name: "Architecture & Tooling"
     keywords:
