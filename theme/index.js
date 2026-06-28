@@ -421,7 +421,6 @@ function render(resume) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${basics.name || "Resume"}</title>
   <style>${css}</style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 </head>
 <body>
   <header>
@@ -512,8 +511,6 @@ function render(resume) {
       : ""
   }
 
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}]})"></script>
 </body>
 </html>`;
 }
