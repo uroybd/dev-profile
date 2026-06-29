@@ -3,14 +3,15 @@ meta:
   lastModified: "2026-03-12T00:00:00.000Z"
 basics:
   name: "Utsob Roy"
-  label: "Polyglot Programmer & System Architect"
+  label: "Staff Systems Engineer | Systems Architect"
   image: "src/images/avatar-transparent.png"
   summary: >
-    Systems software engineer, technical leader, and applied logician specializing in platform architecture, 
-    distributed systems, and infrastructure governance. Backed by over a decade of experience steering 
-    engineering divisions, designing deterministic execution states, and migrating legacy architectures to 
-    high-velocity core platforms. Driven by absolute structural precision, I focus on engineering clean, 
-    resilient systems from first principles to achieve maximum runtime efficiency and operational velocity.
+    Hands-on Systems Software Engineer and Architect with over a decade of experience designing high-performance 
+    distributed platforms, runtime-optimized backends, and core infrastructure. Proven track record of owning 
+    complex engineering epics from initial architectural blueprint to production delivery—partnering closely 
+    with development tracks to align technical vision, review code, and eliminate performance bottlenecks. 
+    A deeply technical individual contributor who anchors system design from first principles while maintaining 
+    a highly active daily presence in production codebases and open-source ecosystems.
   website: "https://dev.utsob.me"
   url: "https://dev.utsob.me"
   email: "connect@utsob.me"
@@ -29,76 +30,58 @@ skills:
     keywords:
       - "Rust"
       - "Go"
-      - "TypeScript/JavaScript"
       - "Python"
-      - "Dart"
-      - "HTML and Derivatives"
-      - "Java"
-      - "Kotlin"
-      - "Clojure"
+      - "TypeScript / JavaScript"
+      - "Common Lisp"
       - "Lua"
-  - name: "Cloud & DevOps"
-    keywords:
-      - "AWS"
-      - "Google Cloud Platform (GCP)"
-      - "Kubernetes"
-      - "Docker"
-      - "CI/CD Pipelines"
-      - "Terraform"
-      - "Serverless"
-      - "Cloudflare"
-      - "OpenStack"
-  - name: "Databases"
-    keywords:
-      - "PostgreSQL"
-      - "MySQL"
-      - "MongoDB"
-      - "Redis"
-      - "Elasticsearch"
-  - name: "Distributed Systems & Protocols" # NEW
-    keywords:
-      - "Event-Driven Architecture"
-      - "Message Brokers (RabbitMQ)"
-      - "RESTful API Design"
-      - "Asynchronous Processing"
-      - "Pub/Sub Architectures"
-  - name: "Architecture & Tooling"
+  - name: "Distributed Systems & Architecture"
     keywords:
       - "System Design"
-      - "API Design"
-      - "Microservices"
-      - "Real-time Systems"
-      - "CLI Tools"
-      - "Open Source Maintenance"
-  - name: "Systems Primitives & Automation" # NEW
+      - "Microservices Architecture"
+      - "Event-Driven Architecture"
+      - "Message Brokers (RabbitMQ)"
+      - "RESTful API Architecture"
+      - "Real-time Telemetry Systems"
+      - "Developer Tooling & CLI Tools"
+      - "Open Source Infrastructure"
+  - name: "Cloud, Infrastructure & DevOps"
+    keywords:
+      - "Kubernetes"
+      - "Docker"
+      - "Terraform (IaC)"
+      - "CI/CD Pipeline Automation"
+      - "AWS"
+      - "Google Cloud Platform (GCP)"
+      - "OpenStack Private Cloud"
+      - "Cloudflare"
+  - name: "Databases & Storage Engines"
+    keywords:
+      - "PostgreSQL"
+      - "MongoDB (Time Series & Geospatial)"
+      - "Redis (Caching & Pub/Sub)"
+      - "Elasticsearch"
+      - "MySQL"
+  - name: "Systems Primitives & OS Architecture"
     keywords:
       - "POSIX Standards"
-      - "Unix / Linux Systems"
-      - "Shell Scripting (Bash/Zsh/Nushell)"
-      - "Process Orchestration"
+      - "Unix / Linux Systems Engineering"
       - "Memory Management Optimization"
-      - "I/O Redirection Pipelines"
-  - name: "Frameworks"
+      - "Process Orchestration"
+      - "Shell Scripting (Bash / Zsh / Nushell)"
+  - name: "Backend Frameworks & Runtimes"
     keywords:
-      - "Django"
+      - "Django (Python)"
       - "Node.js"
-      - "React"
-      - "Next.js"
-      - "Tailwind CSS"
-      - "Redux"
-      - "Apollo / GraphQL"
-      - "Electron"
-      - "Tauri"
-      - "Flutter"
-  - name: "Engineering Leadership & Governance" # NEW
+      - "Tauri (Rust Runtime)"
+      - "Wagtail CMS"
+  - name: "Technical Governance & Execution"
     keywords:
       - "Technical Leadership"
-      - "Engineering Management"
-      - "SDLC Optimization"
       - "Technical Specifications (RFCs)"
-      - "Team Mentorship & Culture"
-      - "Cross-Functional Governance"
-      - "Agile / Scrum Methodologies"
+      - "Architectural Governance"
+      - "Cross-Functional Collaboration"
+      - "SDLC Optimization"
+      - "Code Review Governance"
 volunteer:
   - organization: "KOReader"
     position: "Open Source Contributor"
@@ -142,18 +125,17 @@ work:
     position: "Engineering Manager"
     startDate: "2024-11-15"
     summary: >
-      Lead core platform architecture and engineering squads for a multi-tenant logistics SaaS, orchestrating complex
-      B2B, P2P, and first/last-mile fulfillment networks. Responsible for driving systemic database optimizations,
-      high-throughput telemetry pipelines, and federated third-party fleet integration frameworks.
+      Operate as hands-on core platform architect and technical anchor for a multi-tenant logistics SaaS ecosystem, 
+      focusing on Go/Rust systems implementation, runtime performance optimization, and database schema design. 
+      [90% Platform Architecture & Core Systems Coding | 10% Low-Overhead Technical Alignment & Async Collaboration]
     highlights:
-      - "**Architectural Modernization:** Engineered the architectural migration of legacy JavaScript proof-of-concept (POC) codebases to Go, drastically optimizing runtime memory consumption and enforcing strict type safety across core services."
-      - "**High-Performance Scaling:** Re-engineered the core Orders API architecture and optimized **MongoDB** document schemas and indexing strategies, expanding instantaneous payload capacity from ~700 to 10,000+ concurrent orders without performance degradation."
-      - "**Automated Fleet Dispatching:** Devised a multi-driver bulk routing engine that collapsed manual, order-by-order logistics coordination into an automated, single-action execution system—instantly grouping and distributing thousands of pending orders into optimized delivery paths based on real-time driver availability."
-      - "**Geospatial Verification Engines:** Re-engineered the 'driver nearby' proximity validation engine, implementing advanced geospatial indexing to automatically verify vehicle presence within pickup and delivery geofences, providing auditable verification data that resolved customer disputes and late-delivery claims."
-      - "**Real-Time Telemetry Systems:** Architected driver location tracking and historical order transit trails using **MongoDB Time Series** collections, significantly reducing database storage overhead while enabling high-throughput ingestion and deep operational traceability."
-      - "**Distributed Architecture:** Implemented a decoupled Task Consumer design pattern utilizing **RabbitMQ** to offload long-running operations out of the critical request-response lifecycle, maximizing platform uptime and background processing throughput."
-      - "**Enterprise Search Systems:** Deployed an advanced server-side order search layer leveraging MongoDB Atlas, enabling complex multi-attribute indexing and low-latency querying across multi-modal delivery data."
-      - "**Technical Governance & Leadership:** Guided cross-functional sprint teams by authoring detailed technical specifications for platform revamps and establishing a telemetry review framework to systematically catalog and eliminate weekly operational bugs."
+      - "**Architectural Modernization:** Coded the architectural migration of legacy JavaScript proof-of-concept repositories to high-performance Go microservices, implementing strict type safety and reducing runtime memory overhead."
+      - "**High-Performance Scaling:** Re-engineered the backend Orders API architecture and optimized MongoDB document schemas and indexes, increasing payload capacity from ~700 to 10,000+ concurrent orders without latency degradation."
+      - "**Automated Fleet Dispatching:** Devised a multi-driver bulk routing engine that automated manual order logistics coordination; built the backend data structures to ingest and map real-time geospatial driver trails."
+      - "**Geospatial Verification Engines:** Coded a proximity validation engine using geospatial indexing to automatically verify vehicle location presence within delivery geofences to resolve customer disputes."
+      - "**Real-Time Telemetry Systems:** Architected driver location tracking pipelines using MongoDB Time Series collections, reducing database storage overhead while scaling ingestion capabilities for high-frequency coordinate payloads."
+      - "**Distributed Architecture:** Implemented a decoupled background task consumer using RabbitMQ to offload long-running operational processes out of the critical request-response lifecycle, increasing platform uptime."
+      - "**Technical Alignment via RFCs:** Authored technical specifications and architectural blueprints (RFCs) for platform infrastructure revamps, providing clear execution paths for collaborating developers."
   - name: "COdesign Ltd."
     website: "https://co.design"
     location: "Dhaka"
@@ -161,17 +143,29 @@ work:
     startDate: "2017-02-04"
     endDate: "2024-11-14"
     summary: >
-      Directed the technology division of an architectural digital design agency, treating software engineering 
-      as a structural design discipline. Shaped the company's technical culture and operational SDLC from the ground up—building 
-      highly scalable architectural frameworks, mentoring engineering talent, and establishing a resilient, 
-      solution-oriented ecosystem that anchored long-term organizational stability and business growth.
+      Served as the principal software architect and technical authority across client and internal ecosystems, 
+      personally executing platform design, backend development, and systems migrations from first principles. 
+      [70% Technical Architecture, Systems Design & Implementation | 30% Cross-Functional Alignment & Technical Mentorship]
     highlights:
-      - "**Architectural Paradigm Shift:** Championed the migration of the organization's core client framework away from monolithic WordPress defaults to a decoupled **Django (Python)** and **Wagtail CMS** architecture paired with a **Vue.js** Server-Side Rendered (SSR) frontend; established a distinct market advantage by unlocking elite page-load velocities and flawless SEO compliance alongside a clean, clutter-free editing experience."
-      - "**Supply Chain Compliance & Certification Platforms:** Engineered a highly complex factory safety, workshop tracking, and certification platform for BRAC; architected a data-driven framework managing multi-tiered enrollment (corporate staff and factory laborers), cascading train-the-trainer workshop tracking pipelines, and automated auditing tools to formally certify industrial facilities for international buyer compliance verification."
-      - "**Engineering Excellence & SDLC Optimization:** Instituted comprehensive automated testing practices and modern CI/CD pipelines that accelerated operational velocity, reducing end-to-end software development time by 33%; engineered a unified workflow spanning from initial client pitch to production delivery while introducing peer code reviews and structural learning frameworks to maximize cross-team engineering quality."
-      - "**Resource-Optimized Enterprise Architecture:** Spearheaded the design and architecture of BRAC's flagship institutional e-learning platform utilizing **Django (Python)** and **Vue.js**; engineered an advanced multi-format course creation dashboard and adaptive question bank infrastructure that reliably sustains 90,000+ active users while operating with extreme efficiency on a single, lean 4GB RAM / 2 vCPU node."
-      - "**Open-Source Culture & Tooling Advocacy:** Spearheaded a foundational cultural shift toward open-source innovation within the organization, orchestrating the development and public release of high-utility developer tools and architectural utilities; successfully established the engineering team as active ecosystem contributors while delivering robust packages widely utilized across the industry."
-      - "**Design Systems & Enterprise Frontend Engineering:** Directed cross-functional development and UI/UX squads to deliver premium digital platforms for high-profile global and national brands; spearheaded the development of **Bata’s** global UI guidelines, orchestrated the pioneering first-of-its-kind localization and framework implementation of **Toyota's** global UI standards for Toyota Bangladesh, and led the complete platform frontend modernization for **Prothom Alo**."
+      - "**Architectural Paradigm Shift:** Architected the migration of core client frameworks away from monolithic WordPress platforms to a decoupled Django (Python) and Wagtail CMS backend paired with a Vue.js Server-Side Rendered (SSR) frontend, improving page-load velocities and SEO performance."
+      - "**Resource-Optimized Enterprise Architecture:** Designed and built BRAC's institutional e-learning platform utilizing Django and Vue.js; engineered a modular course dashboard and question-bank infrastructure that sustained 90,000+ active users on a single, restricted 4GB RAM / 2 vCPU node."
+      - "**Supply Chain Compliance Platforms:** Engineered a factory safety, workshop tracking, and audit certification platform for BRAC, architecting data schemas that managed multi-tiered corporate/laborer enrollments and cascading pipeline verification data."
+      - "**Engineering Standards & CI/CD:** Integrated automated testing suites and CI/CD pipelines into the core delivery workflow, reducing manual release overhead and cutting end-to-end software delivery cycles by 33%."
+      - "**Design Systems & Core Frontend Integration:** Coded the structural frontend implementation and localization frameworks for major enterprise deployments, executing Toyota’s global UI standards for Toyota Bangladesh and modernizing the frontend platform for Prothom Alo."
+      - "**Open-Source Infrastructure:** Spearheaded internal open-source development initiatives, organizing the technical construction and public release of utility packages and developer tools used across the engineering organization."
+  - name: "Panacea Systems Ltd."
+    location: "Dhaka"
+    position: "DevOps Programmer"
+    startDate: "2015-06-01"
+    endDate: "2016-09-30"
+    summary: >
+      Operated as a foundational infrastructure and systems programmer within a high-velocity fintech ecosystem, 
+      taking ownership of bare-metal server virtualization, continuous deployment workflows, and custom backend service layers.
+      [100% Infrastructure as Code, Systems Virtualization & Core Service Implementation]
+    highlights:
+      - "**Private Cloud Infrastructure:** Engineered and provisioned an in-house, bare-metal private cloud platform leveraging OpenStack, abstracting raw underlying hardware nodes to establish a virtualized execution environment for core production workloads."
+      - "**Conversational NLP Engines:** Built a custom parser and context classification engine integrated with transactional messaging APIs, systematically mapping unstructured token sequences into dynamic backend data structures."
+      - "**Automated Platform Deployment:** Architected isolated environment configurations and continuous deployment pipelines, allowing distributed fintech application layers to be compiled, validated, and safely shipped onto local cloud instances."
   - name: "Panacea Systems Ltd."
     location: "Dhaka"
     position: "DevOps Programmer"
