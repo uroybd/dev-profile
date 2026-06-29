@@ -130,7 +130,7 @@ work:
       [90% Platform Architecture & Core Systems Coding | 10% Low-Overhead Technical Alignment & Async Collaboration]
     highlights:
       - "**Architectural Modernization:** Coded the architectural migration of legacy JavaScript proof-of-concept repositories to high-performance Go microservices, implementing strict type safety and reducing runtime memory overhead."
-      - "**High-Performance Scaling:** Re-engineered the backend Orders API architecture and optimized MongoDB document schemas and indexes, increasing payload capacity from ~700 to 10,000+ concurrent orders without latency degradation."
+      - "**High-Performance Scaling:** Re-engineered the backend Orders API architecture and optimized MongoDB document schemas and indexes, expanding instantaneous payload capacity from ~700 to 10,000+ concurrent orders per individual workspace within the multi-tenant platform."
       - "**Automated Fleet Dispatching:** Devised a multi-driver bulk routing engine that automated manual order logistics coordination; built the backend data structures to ingest and map real-time geospatial driver trails."
       - "**Geospatial Verification Engines:** Coded a proximity validation engine using geospatial indexing to automatically verify vehicle location presence within delivery geofences to resolve customer disputes."
       - "**Real-Time Telemetry Systems:** Architected driver location tracking pipelines using MongoDB Time Series collections, reducing database storage overhead while scaling ingestion capabilities for high-frequency coordinate payloads."
@@ -168,72 +168,58 @@ work:
       - "**Automated Platform Deployment:** Architected isolated environment configurations and continuous deployment pipelines, allowing distributed fintech application layers to be compiled, validated, and safely shipped onto local cloud instances."
 projects:
   - name: "DotR"
-    startDate: "2026-01-01"
+    startDate: "2025-11-17"
     description: >
-      A high-performance dotfiles manager built with Rust, designed for complex, multi-environment configuration workflows.
-      Features native template engine support, profile-based dependency management, and secure interactive secrets handling.
+      A high-performance dotfiles manager written in Rust, published natively on crates.io and Homebrew. 
+      Manages cross-machine configurations through environment profiles, Tera templating, and a layered 
+      variable system with zero runtime dependencies beyond the compiled static binary.
     highlights:
-      - "Built with Rust to provide a no-dependency high-performance single-binary option"
-      - "Supports environment-specific profiles (work, home, server) with granular dependency tracking"
-      - "Implements dynamic configuration using the Tera templating engine and custom pre/post-deployment hooks"
-      - "Advanced CLI features including dry-run mode, diff-visualization, and automated orphaned-package cleanup"
-      - "Allows both symlinking and copying for deployment"
+      - "**Zero-Dependency Architecture:** Ships as a single static binary compiled natively in Rust, installable directly via Homebrew or cargo with no external runtime requirements."
+      - "**Layered Variable Precedence:** Implements a strict five-level precedence cascade (env → config → package → profile → user secrets), allowing complex templates to adapt dynamically per-machine without configuration duplication."
+      - "**Prompt-Once Secret Handling:** Engineered an interactive CLI workflow for initial deployments that prompts for credentials and state variables once, safely caching answers to a gitignored .uservariables.toml layout."
+      - "**Content-Aware State Management:** Designed a robust state tracking engine featuring per-file .dotrbak backup configurations alongside a clean execution mode that automatically prunes destination files absent from the source tree."
+      - "**Dual Workflow Mechanics:** Built structural support for both absolute symlink mapping and direct file copy routines; symlink mode tracks asset modifications live to enable real-time local repository synchronization."
     website: "https://github.com/uroybd/DotR"
   - name: "BooxRichAnnotations"
-    startDate: "2026-06-15"
+    startDate: "2026-06-01"
     description: >
-      A specialized native Android application engineered for Onyx Boox devices to extract and export complex reading annotations.
-      Bypasses standard limitations by interacting directly with the proprietary NeoReader system content providers.
+      A specialized native Android application engineered for Onyx Boox devices to extract and export complex 
+      reading annotations. Bypasses standard hardware limitations by interacting directly with the proprietary 
+      NeoReader system content providers to access hidden annotation metadata.
     highlights:
-      - "Reverse-engineered Onyx content provider databases to extract rich metadata, including annotation color, style (wavy/dashed), and placement"
-      - "Developed a flexible export pipeline supporting JSON, CSV, and user-defined Markdown templates via the Pebble engine"
-      - "Optimized UI for E-ink displays with a zero-animation, high-contrast, pure black-and-white interface built with **Kotlin**"
+      - "**Provider Schema Reverse-Engineering:** Reverse-engineered NeoReader's proprietary ContentProvider database schemas to extract hidden annotation metadata assets, including precise color values, textual styles (wavy, dashed, strikethrough), chapter contexts, and underlying spatial placement."
+      - "**Multi-Format Data Pipeline:** Built a robust export and transformation engine supporting automated deduplication, customized target storage directories, and dynamic file layouts via JSON, CSV, and Pebble-templated Markdown structures."
+      - "**E-Ink Hardware Optimization:** Enforced strict architectural constraints across 12 consecutive production releases to optimize execution on resource-constrained E-ink hardware, mandating zero-animation rendering loops, high-contrast monochrome layouts, 17–22sp typography scaling, and fixed 48dp touch interaction target areas."
     website: "https://github.com/uroybd/BooxRichAnnotations"
-  - name: "EpubPress Web Client"
-    startDate: "2024-10-01"
-    description: >
-      A platform-agnostic web application that scales EpubPress functionality to mobile browsers, enabling users to bundle multi-tab web articles into clean,
-      ad-free e-books without requiring a desktop browser extension.
-    highlights:
-      - "Eliminated client-side extension barriers by building a mobile-responsive web alternative, allowing e-reader users to aggregate content directly from iOS or Android devices"
-    website: "https://github.com/uroybd/epubpress-web"
   - name: "Advent of Code Solutions"
-    startDate: "2020-12-01"
+    startDate: "2015-12-01"
     description: >
-      A dedicated Rust implementation repository focused on engineering low-latency programmatic solutions to complex graph theory data structures, 
-      spatial geometry puzzles, and discrete mathematical problems using strict, zero-overhead execution mechanics.
+      A collection of over 85 constraint-satisfaction and graph theory problems solved in Rust across six 
+      years (2015, 2021–2025). Emphasizes compile-time specialization, state-space reduction, and measurable 
+      sub-millisecond throughput verified by a continuous Criterion benchmarking pipeline.
     highlights:
-      - "Engineered highly optimized graph traversal, pathfinding, and combinatorial puzzle engines in **Rust**, collapsing complex multi-dimensional data structures into high-velocity execution states."
-      - "Implemented advanced optimization techniques including **A* search** parameterized via **const generics** (2021/Day 23) and **bitmask state encoding** (2022/Day 16) to resolve massive multi-agent state spaces without joint enumeration overhead."
-      - "Leveraged computational geometry primitives—including **weighted inclusion-exclusion** (2021/Day 22) and **const fn** ray-casting (2025/Day 09)—while establishing a **Criterion benchmarking** pipeline to ensure execution under 1 ms."
+      - "**Compile-Time Specialization:** Designed a compile-time-specialized A* search engine using const generics (`astar_fuel_cost<const N: usize>`) for an multi-agent pathfinding scheduler, encoding spatial map depth directly into type parameters to eliminate runtime branching and stack allocation variance."
+      - "**Bitmask State Compression:** Reduced a 26-node graph traversal problem to a bitmask-compressed state space by encoding open-node sets as raw integer bits, transforming an intractable joint enumeration into a high-velocity dynamic programming sequence over integer keys."
+      - "**Mathematical Set Optimization:** Applied a signed inclusion-exclusion paradigm over multi-dimensional cuboid intersections to accurately track volume matrices in unbounded 3D spaces without materializing massive underlying grids."
+      - "**Performance Benchmarking & Profiling:** Built a comprehensive Criterion benchmarking harness featuring a baseline-diffing engine (`update_benchmarks`) to systematically catch optimization regressions, leveraging Rayon data-parallelism and fxhash primitives across runtime hotspots."
     website: "https://github.com/uroybd/AdventOfCode"
-  - name: "e-Boipotro"
-    startDate: "2014-02-01"
-    description: >
-      An open-access digital preservation platform and zero-infrastructure catalog engineered to bridge localized 
-      content scarcity by converting legacy, poorly-scanned image PDFs of public-domain Bangla literature into 
-      highly accessible, semantic digital formats.
-    highlights:
-      - "Structurally compiled and curated 246+ handcrafted, reflowable EPUB publications built with strict formatting guidelines, embedded typographic hierarchy, and rich bibliographic metadata"
-      - "Implemented an OPDS (Open Publication Distribution System) feed XML schema, enabling seamless metadata syndication, remote discovery, and native library integration for modern external e-reader software"
-      - "Architected a high-efficiency, serverless static web application featuring modular read-in-browser parsing alongside decoupling layer mechanics for fast, reliable direct file downloads"
-    website: "https://eboipotro.github.io/"
 languages:
   - language: "Bengali"
     fluency: "Native"
   - language: "English"
     fluency: "Advanced"
 interests:
-  - name: "Systemic Reading & Personal Knowledge Management (PKM)"
+  - name: "Aesthetic Theory, Active Reading & Generative Synthesis"
     keywords:
-      - "Active Reading & Marginalia"
-      - "Text Synthesizing & Analytical Prose"
-      - "Epistemology & Epistemic Logic"
-      - "Technical & Philosophy Literature"
-      - "Relational Cataloging Architecture (uroybd/Book-Base)"
-  - name: "Open Source & Competitive Logic"
+      - "Philosophical Aesthetics & Structural Theory (Music, Painting, Literature)"
+      - "Intensive Annotation & Critical Textual Deconstruction"
+      - "Digital Gardening & Public Synthesizing (https://hermitage.utsob.me)"
+      - "Analytical Review Writing & Comparative Artistic Frameworks"
+      - "Creative Writing & Structural Idea Construction"
+      - "Relational Cataloging Data Modeling (uroybd/Book-Base)"
+  - name: "Open Source"
     keywords:
-      - "Upstream Contributions"
-      - "Developer Tooling Architecture"
-      - "Algorithmic Puzzles & Graph Optimization"
-      - "Community Maintenance"
+      - "Upstream Code Contributions"
+      - "End-User Focused Application Optimization"
+      - "Hardware-Constrained Accessibility & Input Subsystems"
+      - "Ecosystem & Non-Technical Community Maintenance"
