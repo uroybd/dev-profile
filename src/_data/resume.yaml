@@ -166,18 +166,6 @@ work:
       - "**Private Cloud Infrastructure:** Engineered and provisioned an in-house, bare-metal private cloud platform leveraging OpenStack, abstracting raw underlying hardware nodes to establish a virtualized execution environment for core production workloads."
       - "**Conversational NLP Engines:** Built a custom parser and context classification engine integrated with transactional messaging APIs, systematically mapping unstructured token sequences into dynamic backend data structures."
       - "**Automated Platform Deployment:** Architected isolated environment configurations and continuous deployment pipelines, allowing distributed fintech application layers to be compiled, validated, and safely shipped onto local cloud instances."
-  - name: "Panacea Systems Ltd."
-    location: "Dhaka"
-    position: "DevOps Programmer"
-    startDate: "2015-06-01"
-    endDate: "2016-09-30"
-    summary: >
-      Joined as a foundational DevOps engineer within a fast-paced fintech environment, taking ownership of on-premise 
-      infrastructure virtualization, automated environment provisioning, and conversational service layer development.
-    highlights:
-      - "**Private Cloud Infrastructure:** Engineered and provisioned an in-house, bare-metal private cloud infrastructure leveraging **OpenStack**; successfully abstracted underlying server hardware to establish a scalable, virtualized deployment environment for all production workloads."
-      - "**Conversational Interface & NLP Engineering:** Engineered an intelligent, NLP-driven conversational chatbot integrated with the Facebook Messenger API; implemented intent parsing and contextual classification to systematically map unstructured user dialogue into a dynamic, localized restaurant recommendation engine."
-      - "**Automated Platform Deployment:** Designed isolated environment profiles and continuous deployment configurations, allowing core fintech application layers to be securely compiled, tested, and shipped onto local virtualized cloud nodes with minimal manual intervention."
 projects:
   - name: "DotR"
     startDate: "2026-01-01"
