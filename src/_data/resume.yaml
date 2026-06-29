@@ -89,9 +89,8 @@ volunteer:
     startDate: "2022-01-01"
     summary: "Contributed core features, UI rendering components, and input subsystems to a high-performance, cross-platform document viewer optimized for E-ink hardware devices."
     highlights:
-      - "Spearheaded a comprehensive revamp of the core highlight export plugin written in **Lua** to optimize data structures and reliability for reader annotations."
-      - "Designed and implemented an optimized, low-overhead graphical reading progress bar component for library items inside the grid-view UI, mitigating rendering cycles under restricted E-ink display refresh bounds."
-      - "Engineered and integrated the native Bengali Probhat virtual keyboard input layout mapping directly into the system application layer to expand regional user accessibility."
+      - "Spearheaded a comprehensive revamp of the core highlight export plugin written in **Lua** to optimize data structures and extensibility of this feature to support various export formats and PKM integrations."
+      - "Integrated the native Bengali Probhat virtual keyboard input layout mapping directly into the system application layer to expand regional user accessibility."
   - organization: "Obsidian Digital Garden"
     position: "Open Source Contributor"
     url: "https://github.com/oleeskild/obsidian-digital-garden"
@@ -108,7 +107,7 @@ volunteer:
     url: "https://sh.howtocode.dev"
     startDate: "2014-08-01"
     endDate: "2015-05-31"
-    summary: "Authored a comprehensive, open-source reference guide and interactive technical curriculum designed to demystify Unix shell scripting, POSIX compliance standards, and terminal-driven automation pipelines."
+    summary: "Authored a comprehensive, open-source reference guide and interactive technical curriculum (in Bangla) designed to demystify Unix shell scripting, POSIX compliance standards, and terminal-driven automation pipelines."
     highlights:
       - "Served as the primary technical author and curriculum architect, designing detailed technical modules spanning from basic stream manipulation to complex shell lifecycle execution."
       - "Deconstructed fundamental operating system primitives—including I/O redirection pipelines, file descriptor tracking, signal traps, and asynchronous process orchestration—into clear programmatic guides."
