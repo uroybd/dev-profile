@@ -111,7 +111,6 @@ volunteer:
     highlights:
       - "Served as the primary technical author and curriculum architect, designing detailed technical modules spanning from basic stream manipulation to complex shell lifecycle execution."
       - "Deconstructed fundamental operating system primitives—including I/O redirection pipelines, file descriptor tracking, signal traps, and asynchronous process orchestration—into clear programmatic guides."
-      - "Engineered a maintainable markdown-driven documentation layout within the open-source repository to encourage seamless community localization, syntax contributions, and upstream extensions."
 references:
   - name: "Amit Richard, CEO of COdesign Ltd."
     reference: >
