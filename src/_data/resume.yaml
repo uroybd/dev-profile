@@ -196,7 +196,7 @@ projects:
       years (2015, 2021–2025). Emphasizes compile-time specialization, state-space reduction, and measurable 
       sub-millisecond throughput verified by a continuous Criterion benchmarking pipeline.
     highlights:
-      - "**Compile-Time Specialization:** Designed a compile-time-specialized A* search engine using const generics (`astar_fuel_cost<const N: usize>`) for an multi-agent pathfinding scheduler, encoding spatial map depth directly into type parameters to eliminate runtime branching and stack allocation variance."
+      - "**Compile-Time Specialization:** Designed a compile-time-specialized A* search engine using const generics (`astar_fuel_cost<const N: usize>`) for a multi-agent pathfinding scheduler, encoding spatial map depth directly into type parameters to eliminate runtime branching and stack allocation variance."
       - "**Bitmask State Compression:** Reduced a 26-node graph traversal problem to a bitmask-compressed state space by encoding open-node sets as raw integer bits, transforming an intractable joint enumeration into a high-velocity dynamic programming sequence over integer keys."
       - "**Mathematical Set Optimization:** Applied a signed inclusion-exclusion paradigm over multi-dimensional cuboid intersections to accurately track volume matrices in unbounded 3D spaces without materializing massive underlying grids."
       - "**Performance Benchmarking & Profiling:** Built a comprehensive Criterion benchmarking harness featuring a baseline-diffing engine (`update_benchmarks`) to systematically catch optimization regressions, leveraging Rayon data-parallelism and fxhash primitives across runtime hotspots."
