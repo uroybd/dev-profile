@@ -80,6 +80,7 @@ module.exports = function (eleventyConfig) {
     fs.writeFileSync(tmpJson, JSON.stringify(resumeData));
     execSync(`./node_modules/.bin/resume export public/${cvFilename}.pdf --resume ${tmpJson} --theme ./theme`, { stdio: "inherit" });
     fs.copyFileSync(`public/${cvFilename}.pdf`, "public/cv.pdf");
+    execSync(`./node_modules/.bin/resume export public/cv.md --resume ${tmpJson} --format md`, { stdio: "inherit" });
   });
 
   eleventyConfig.addDataExtension("yaml, yml", (contents) => {
