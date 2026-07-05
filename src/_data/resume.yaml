@@ -90,7 +90,7 @@ volunteer:
     summary: "Contributed core features, UI rendering components, and input subsystems to a high-performance, cross-platform document viewer optimized for E-ink hardware devices."
     highlights:
       - "Spearheaded a comprehensive revamp of the core highlight export plugin written in **Lua** to optimize data structures and extensibility of this feature to support various export formats and PKM integrations."
-      - "Integrated the native Bengali Probhat virtual keyboard input layout mapping directly into the system application layer to expand regional user accessibility."
+      - "Integrated the native Bengali Probhat virtual keyboard input layout mapping directly into the application to expand regional user accessibility."
   - organization: "Obsidian Digital Garden"
     position: "Open Source Contributor"
     url: "https://github.com/oleeskild/obsidian-digital-garden"
