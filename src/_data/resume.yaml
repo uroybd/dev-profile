@@ -177,7 +177,7 @@ projects:
       - "**Prompt-Once Secret Handling:** Engineered an interactive CLI workflow for initial deployments that prompts for credentials and state variables once, safely caching answers to a gitignored .uservariables.toml layout."
       - "**Content-Aware State Management:** Designed a robust state tracking engine featuring per-file .dotrbak backup configurations alongside a clean execution mode that automatically prunes destination files absent from the source tree."
       - "**Dual Workflow Mechanics:** Built structural support for both absolute symlink mapping and direct file copy routines; symlink mode tracks asset modifications live to enable real-time local repository synchronization."
-    website: "https://github.com/uroybd/DotR"
+    website: "https://dotr.utsob.me"
   - name: "BooxRichAnnotations"
     startDate: "2026-06-01"
     description: >
