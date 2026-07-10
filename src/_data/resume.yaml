@@ -169,14 +169,16 @@ projects:
     startDate: "2025-11-17"
     description: >
       A high-performance dotfiles manager written in Rust, published natively on crates.io and Homebrew. 
-      Manages cross-machine configurations through environment profiles, Tera templating, and a layered 
-      variable system with zero runtime dependencies beyond the compiled static binary.
+      Manages cross-machine configurations through environment profiles, Tera templating, a layered 
+      variable system, and pluggable secret backends, with zero runtime dependencies beyond the 
+      compiled static binary.
     highlights:
-      - "**Zero-Dependency Architecture:** Ships as a single static binary compiled natively in Rust, installable directly via Homebrew or cargo with no external runtime requirements."
-      - "**Layered Variable Precedence:** Implements a strict five-level precedence cascade (env → config → package → profile → user secrets), allowing complex templates to adapt dynamically per-machine without configuration duplication."
-      - "**Prompt-Once Secret Handling:** Engineered an interactive CLI workflow for initial deployments that prompts for credentials and state variables once, safely caching answers to a gitignored .uservariables.toml layout."
-      - "**Content-Aware State Management:** Designed a robust state tracking engine featuring per-file .dotrbak backup configurations alongside a clean execution mode that automatically prunes destination files absent from the source tree."
-      - "**Dual Workflow Mechanics:** Built structural support for both absolute symlink mapping and direct file copy routines; symlink mode tracks asset modifications live to enable real-time local repository synchronization."
+      - "**Zero-Dependency, Cross-Platform Distribution:** Ships as a single statically-linked Rust binary — installable via Homebrew, Cargo, or prebuilt release artifacts (macOS/Linux, glibc & musl, x86_64 & aarch64) — with man pages, a JSON Schema for editor validation of `config.toml`, and dynamic shell completions for bash, zsh, fish, elvish, PowerShell, and Nushell."
+      - "**Layered Variable Precedence:** Implements a five-source resolution cascade (config → environment → package → profile → user secrets), letting templates adapt per-machine without configuration duplication, with a `print-vars` command to debug the resolved result."
+      - "**Pluggable Secret Backends:** Evolved one-time credential prompting into three interchangeable storage backends — a gitignored TOML file, the native OS keychain, and a shared Bitwarden secure note — the latter driving the full `bw` CLI session lifecycle (auto login/unlock/vault-sync, re-locking only if DotR itself acquired the lock)."
+      - "**Dependency-Aware Package Graph:** Packages declare dependencies that are resolved and pulled in automatically across deploy/update/diff, with safeguards that block removing a package still referenced elsewhere in `config.toml` unless explicitly forced."
+      - "**Dual Symlink Strategies:** Supports whole-directory ('folded') symlinking for live-editing workflows alongside per-file ('unfolded', stow-style) symlinking that preserves a real destination directory for untracked local files, with safety checks ensuring deploy/clean/update never touch paths outside a package's own tree."
+      - "**Production-Grade OSS Practices:** Backed by a full mdBook documentation site, Codecov-tracked test coverage, deps.rs dependency-freshness monitoring, and `cargo vet` supply-chain auditing."
     website: "https://dotr.utsob.me"
   - name: "BooxRichAnnotations"
     startDate: "2026-06-01"
