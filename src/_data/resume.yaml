@@ -112,6 +112,12 @@ volunteer:
       - "Served as the primary technical author and curriculum architect, designing detailed technical modules spanning from basic stream manipulation to complex shell lifecycle execution."
       - "Deconstructed fundamental operating system primitives—including I/O redirection pipelines, file descriptor tracking, signal traps, and asynchronous process orchestration—into clear programmatic guides."
 references:
+  - name: "Mafinar Khan, Staff Software Engineer at Coffee Meets Bagel"
+    reference: >
+      I had the privilege of training Utsob at the very start of his career, and watching his journey to becoming a Director has been incredibly rewarding.
+      From day one, he stood out as a remarkably fast learner who pushed boundaries by asking the hard questions. He possesses a vision- routinely seeing strategic opportunities
+      and details that few others notice. As a curious polyglot, Utsob never let comfort zones limit his growth or his ability to adapt to new challenges. I highly recommend him
+      to any organization looking for an exceptional, forward-thinking leader.
   - name: "Amit Richard, CEO of COdesign Ltd."
     reference: >
       Beyond his technical expertise, Utsob played a vital role in shaping the culture and process of COdesign's technology division— building frameworks, mentoring talent,
