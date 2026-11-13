@@ -12,7 +12,11 @@
   </div>
   {% endfor %}
   <div class="info-item" id="location">
-    <span class="icon">{% icon "map-pinned" %}</span> <span>{{ resume.basics.location.city }},
-      {{resume.basics.location.countryCode }}</span>
+    <span class="icon">{% icon "map-pinned" %}</span> <span>{{ resume.basics.location.city }}, {{ resume.basics.location.country or resume.basics.location.countryCode }}</span>
   </div>
+  {% if resume.basics.relocation %}
+  <div class="info-item" id="relocation">
+    <span class="icon">{% icon "plane" %}</span> <span>{{ resume.basics.relocation }}</span>
+  </div>
+  {% endif %}
 </section>

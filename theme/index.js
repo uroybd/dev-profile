@@ -58,12 +58,14 @@ function networkIcon(network) {
 
 function date(str) {
   if (!str) return "Present";
-  return str.slice(0, 7);
+  const [y, m] = str.split("-");
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return m ? `${months[Number(m) - 1]} ${y}` : y;
 }
 
 function pills(keywords) {
   if (!keywords || !keywords.length) return "";
-  return `<div class="keywords">${keywords.map((k) => `<span class="pill">${k}</span>`).join("")}</div>`;
+  return `<p class="keywords">${keywords.join(", ")}</p>`;
 }
 
 function render(resume) {
@@ -80,7 +82,7 @@ function render(resume) {
 
   const profiles = (basics.profiles || [])
     .map((p) => {
-      const label = p.username || p.url;
+      const label = p.url ? p.url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "") : p.username;
       return `<span class="info-item">${networkIcon(p.network)} ${p.url ? `<a href="${p.url}">${label}</a>` : label}</span>`;
     })
     .join("");
@@ -93,7 +95,10 @@ function render(resume) {
       ? `<span class="info-item">${lucideIcon("phone")} ${basics.phone}</span>`
       : "",
     basics.location && basics.location.city
-      ? `<span class="info-item">${lucideIcon("map-pin")} ${basics.location.city}${basics.location.countryCode ? ", " + basics.location.countryCode : ""}</span>`
+      ? `<span class="info-item">${lucideIcon("map-pin")} ${basics.location.city}${basics.location.country || basics.location.countryCode ? ", " + (basics.location.country || basics.location.countryCode) : ""}</span>`
+      : "",
+    basics.relocation
+      ? `<span class="info-item">${lucideIcon("plane")} ${basics.relocation}</span>`
       : "",
     basics.website
       ? `<span class="info-item">${lucideIcon("link")} <a href="${basics.website}">${basics.website}</a></span>`
@@ -175,32 +180,13 @@ function render(resume) {
     .join("");
 
   const languagesHtml = languages
-    .map(
-      (l) => `
-    <div class="lang-item">
-      <span class="lang-name">${l.language}</span>
-      ${l.fluency ? `<span class="sub">${l.fluency}</span>` : ""}
-    </div>`,
-    )
-    .join("");
+    .map((l) => `${l.language}${l.fluency ? ` (${l.fluency})` : ""}`)
+    .join(", ");
 
   const interestsHtml = interests
     .map(
-      (i) => `
-    <div class="interest-item">
-      <span class="lang-name">${i.name}</span>
-      ${pills(i.keywords)}
-    </div>`,
-    )
-    .join("");
-
-  const referencesHtml = references
-    .map(
-      (r) => `
-    <figure class="reference-item">
-      <blockquote class="reference-quote">${mdBlock(r.reference)}</blockquote>
-      <figcaption class="reference-name">— ${r.name ? r.name.split("\n").map((line) => mdInline(line)).join("<br>") : ""}</figcaption>
-    </figure>`,
+      (i) =>
+        `<p><strong>${i.name}:</strong> ${(i.keywords || []).join(", ")}</p>`,
     )
     .join("");
 
@@ -222,7 +208,7 @@ function render(resume) {
       color: var(--text);
       margin: 0;
       padding: 0;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -234,11 +220,11 @@ function render(resume) {
     h1 { font-size: 2.8rem; }
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.2rem; }
-    h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+    h4 { font-size: 1.05rem; font-weight: 400; margin-bottom: 0.2rem; }
 
     a { color: var(--accent); text-decoration: none; }
 
-    p, li { font-weight: 300; line-height: 1.5; }
+    p, li { font-weight: 400; line-height: 1.45; }
 
     header {
       display: flex;
@@ -256,7 +242,7 @@ function render(resume) {
     }
 
     .section {
-      padding: 0 0 1.25rem;
+      padding: 0 0 1rem;
     }
 
     .section hr {
@@ -280,16 +266,10 @@ function render(resume) {
     #summary {
       font-size: 0.95rem;
       line-height: 1.6;
-      text-align: justify;
-    }
-
-    .two-col {
-      columns: 2;
-      gap: 2rem;
     }
 
     .col-item {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .col-item h4, .section h3, .section hr {
@@ -344,37 +324,16 @@ function render(resume) {
     }
 
     .keywords {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.5rem;
+      margin: 0.3rem 0 0;
+      font-size: 0.9rem;
     }
 
-    .pill {
-      display: inline-block;
-      padding: 0.2rem 0.65rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      font-size: 0.78rem;
-      font-weight: 300;
+    .reference-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 0.4rem;
     }
 
-    .lang-list, .interest-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem 3rem;
-    }
-
-    .lang-item, .interest-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
-
-    .lang-name {
-      font-size: 1rem;
-      font-weight: 400;
-    }
 
     .item-url {
       font-size: 0.78rem;
@@ -382,34 +341,6 @@ function render(resume) {
       opacity: 0.7;
       text-align: right;
       word-break: break-all;
-    }
-
-    .reference-item {
-      margin: 0 0 1rem;
-      padding: 0.9rem 1.25rem;
-      border-left: 3px solid var(--accent);
-      background: rgba(0, 0, 0, 0.03);
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-
-    .reference-quote {
-      margin: 0 0 0.5rem;
-    }
-
-    .reference-quote p {
-      margin: 0;
-      line-height: 1.6;
-      font-style: italic;
-      font-weight: 300;
-    }
-
-    .reference-name {
-      font-size: 0.85rem;
-      color: var(--accent);
-      font-weight: 400;
-      text-align: right;
-      display: block;
     }
 
   `;
@@ -433,14 +364,14 @@ function render(resume) {
 
   ${contactItems ? `<div class="contact">${contactItems}</div>` : ""}
 
-  ${basics.summary ? `<div class="section" id="summary">${mdBlock(basics.summary)}</div>` : ""}
+  ${basics.summary ? `<div class="section" id="section-summary"><h3>Summary</h3><hr><div id="summary">${mdBlock(basics.summary)}</div></div>` : ""}
 
   ${
     skills.length
       ? `
   <div class="section" id="section-skills">
     <h3>Skills</h3><hr>
-    <div class="two-col">${skillsHtml}</div>
+    ${skillsHtml}
   </div>`
       : ""
   }
@@ -449,7 +380,7 @@ function render(resume) {
     work.length
       ? `
   <div class="section" id="section-work">
-    <h3>Work</h3><hr>
+    <h3>Professional Experience</h3><hr>
     ${workHtml}
   </div>`
       : ""
@@ -478,22 +409,22 @@ function render(resume) {
   ${
     languages.length || interests.length
       ? `
-  <div id="section-misc" style="display:flex;gap:2rem;align-items:flex-start;">
+  <div id="section-misc">
     ${
       languages.length
         ? `
-    <div class="section" style="flex:1;">
+    <div class="section">
       <h3>Languages</h3><hr>
-      <div class="lang-list">${languagesHtml}</div>
+      <p>${languagesHtml}</p>
     </div>`
         : ""
     }
     ${
       interests.length
         ? `
-    <div class="section" style="flex:1;">
+    <div class="section">
       <h3>Interests</h3><hr>
-      <div class="interest-list">${interestsHtml}</div>
+      ${interestsHtml}
     </div>`
         : ""
     }
@@ -506,7 +437,10 @@ function render(resume) {
       ? `
   <div class="section" id="section-references">
     <h3>References</h3><hr>
-    ${referencesHtml}
+    <ul class="reference-list">${references
+      .map((r) => `<li><strong>${r.name}</strong>${r.relationship ? ` (${r.relationship})` : ""}</li>`)
+      .join("")}</ul>
+    ${basics.website ? `<p class="sub">Full recommendations at <a href="${basics.website}/#references">${basics.website.replace(/^https?:\/\//, "")}</a></p>` : ""}
   </div>`
       : ""
   }
@@ -516,7 +450,8 @@ function render(resume) {
 }
 
 const pdfRenderOptions = {
-  margin: { top: "1.5cm", right: "2cm", bottom: "1.8cm", left: "2cm" },
+  format: "A4",
+  margin: { top: "1.3cm", right: "1.8cm", bottom: "1.4cm", left: "1.8cm" },
   outline: true,
   mediaType: "print",
   displayHeaderFooter: true,

@@ -1,0 +1,21 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ resume.basics.name }}
+
+> {{ resume.basics.label }}. {{ resume.basics.summary | trim }}
+
+Location: {{ resume.basics.location.city }}, {{ resume.basics.location.country }}{% if resume.basics.relocation %}. {{ resume.basics.relocation }}{% endif %}
+Contact: {{ resume.basics.email }}
+
+## Resume
+
+- [Resume (Markdown)]({{ resume.basics.website }}/cv.md): full resume as plain Markdown, best for LLMs and agents
+- [Resume (PDF)]({{ resume.basics.website }}/cv.pdf): print and ATS version
+- [Resume (HTML)]({{ resume.basics.website }}/): web version with structured data (schema.org JSON-LD)
+
+## Profiles
+{% for profile in resume.basics.profiles %}
+- [{% if profile.network == "github" %}GitHub{% elif profile.network == "linkedin" %}LinkedIn{% else %}{{ profile.network | capitalize }}{% endif %}]({{ profile.url }})
+{%- endfor %}
