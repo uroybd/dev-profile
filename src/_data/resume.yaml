@@ -3,21 +3,22 @@ meta:
   lastModified: "2026-03-12T00:00:00.000Z"
 basics:
   name: "Utsob Roy"
-  label: "Staff Systems Engineer | Systems Architect"
+  label: "Systems Architect | Staff Software Engineer"
   image: "src/images/avatar-transparent.png"
   summary: >
-    Hands-on Systems Software Engineer and Architect with over a decade of experience designing high-performance 
-    distributed platforms, runtime-optimized backends, and core infrastructure. Proven track record of owning 
-    complex engineering epics from initial architectural blueprint to production delivery—partnering closely 
-    with development tracks to align technical vision, review code, and eliminate performance bottlenecks. 
-    A deeply technical individual contributor who anchors system design from first principles while maintaining 
-    a highly active daily presence in production codebases and open-source ecosystems.
+    Systems architect and hands-on engineer with 11+ years of experience designing distributed platforms,
+    high-performance backends and core infrastructure. Owns architecture end to end: design specs (RFCs),
+    data models, implementation, code review and production rollout. Currently Engineering Manager at FULFLLD,
+    working as lead architect of its multi-tenant logistics SaaS platform; previously Technology Director at
+    COdesign for nearly eight years. Still writes production code every day and contributes to open-source projects.
   website: "https://dev.utsob.me"
   url: "https://dev.utsob.me"
   email: "connect@utsob.me"
   location:
-    city: "Dhaka (Open to Relocation to EU)"
+    city: "Dhaka"
+    country: "Bangladesh"
     countryCode: "BD"
+  relocation: "Open to relocation (EU)"
   profiles:
     - url: "https://github.com/uroybd"
       username: "uroybd"
@@ -26,99 +27,100 @@ basics:
       url: "https://www.linkedin.com/in/uroybd"
       network: "linkedin"
 skills:
-  - name: "Programming Languages"
-    keywords:
-      - "Rust"
-      - "Go"
-      - "Python"
-      - "TypeScript / JavaScript"
-      - "Common Lisp"
-      - "Lua"
-  - name: "Distributed Systems & Architecture"
+  - name: "Software Architecture & Design"
     keywords:
       - "System Design"
+      - "Distributed Systems"
       - "Microservices Architecture"
       - "Event-Driven Architecture"
-      - "Message Brokers (RabbitMQ)"
-      - "RESTful API Architecture"
-      - "Real-time Telemetry Systems"
-      - "Developer Tooling & CLI Tools"
-      - "Open Source Infrastructure"
-  - name: "Cloud, Infrastructure & DevOps"
+      - "Multi-Tenant SaaS Architecture"
+      - "API Design (REST)"
+      - "Data Modeling & Schema Design"
+      - "Scalability & Performance Engineering"
+      - "Legacy System Modernization"
+  - name: "Technical Leadership"
+    keywords:
+      - "Architecture Decision Making"
+      - "Technical Specifications (RFCs)"
+      - "Code Review"
+      - "Engineering Process & CI/CD"
+      - "Mentoring"
+      - "Cross-Functional Collaboration"
+  - name: "Cloud & Infrastructure"
     keywords:
       - "Kubernetes"
       - "Docker"
-      - "Terraform (IaC)"
-      - "CI/CD Pipeline Automation"
+      - "Terraform"
       - "AWS"
       - "Google Cloud Platform (GCP)"
-      - "OpenStack Private Cloud"
+      - "OpenStack"
       - "Cloudflare"
-  - name: "Databases & Storage Engines"
+  - name: "Data & Messaging"
     keywords:
       - "PostgreSQL"
-      - "MongoDB (Time Series & Geospatial)"
-      - "Redis (Caching & Pub/Sub)"
+      - "MongoDB (Time Series, Geospatial)"
+      - "Redis"
       - "Elasticsearch"
       - "MySQL"
-  - name: "Systems Primitives & OS Architecture"
+      - "RabbitMQ"
+  - name: "Systems & Operating Systems"
     keywords:
-      - "POSIX Standards"
-      - "Unix / Linux Systems Engineering"
-      - "Memory Management Optimization"
-      - "Process Orchestration"
-      - "Shell Scripting (Bash / Zsh / Nushell)"
-  - name: "Backend Frameworks & Runtimes"
+      - "Linux / Unix"
+      - "POSIX"
+      - "Memory Optimization"
+      - "Process Management"
+      - "Shell Scripting (Bash, Zsh, Nushell)"
+  - name: "Programming Languages"
     keywords:
-      - "Django (Python)"
-      - "Node.js"
-      - "Tauri (Rust Runtime)"
+      - "Go"
+      - "Rust"
+      - "Python"
+      - "TypeScript / JavaScript"
+      - "Lua"
+      - "Common Lisp"
+  - name: "Frameworks & Runtimes"
+    keywords:
+      - "Django"
       - "Wagtail CMS"
-  - name: "Technical Governance & Execution"
-    keywords:
-      - "Technical Leadership"
-      - "Technical Specifications (RFCs)"
-      - "Architectural Governance"
-      - "Cross-Functional Collaboration"
-      - "SDLC Optimization"
-      - "Code Review Governance"
+      - "Node.js"
+      - "Vue.js"
+      - "Tauri"
 volunteer:
   - organization: "KOReader"
     position: "Open Source Contributor"
     url: "https://koreader.rocks"
     startDate: "2022-01-01"
-    summary: "Contributed core features, UI rendering components, and input subsystems to a high-performance, cross-platform document viewer optimized for E-ink hardware devices."
+    summary: "Contributor to KOReader, a cross-platform document reader for e-ink devices."
     highlights:
-      - "Spearheaded a comprehensive revamp of the core highlight export plugin written in **Lua** to optimize data structures and extensibility of this feature to support various export formats and PKM integrations."
-      - "Integrated the native Bengali Probhat virtual keyboard input layout mapping directly into the application to expand regional user accessibility."
+      - "Rewrote the highlight export plugin in **Lua**, restructuring its data model so new export formats and note-app integrations can be added easily."
+      - "Added the Bengali Probhat keyboard layout to the on-screen keyboard."
   - organization: "Obsidian Digital Garden"
     position: "Open Source Contributor"
     url: "https://github.com/oleeskild/obsidian-digital-garden"
     startDate: "2023-06-01"
-    summary: "Contributed major architectural enhancements, metadata parsers, and core features to the leading open-source publishing plugin that compiles local Markdown vaults into static digital gardens."
+    summary: "Contributor to a popular open-source plugin that publishes Obsidian Markdown vaults as static websites."
     highlights:
-      - "Architected an extensible system within **TypeScript** for loading dynamic components, allowing end-users to seamlessly inject and render custom interactive elements within their published notes."
-      - "Engineered an abstract path-rewriting middleware and slug-normalization framework to decouple local Markdown vault folder structures from public static layout URIs, enforcing routing permanence."
-      - "Implemented a unified global iconography metadata parser to dynamically resolve and execute custom icon injections natively across markdown content bodies, title blocks, and recursive file-tree navigation components."
-      - "Optimized the client-side local and global graph rendering engine, significantly reducing calculation overhead and improving smoothness for large personal knowledge bases."
-      - "Engineered an advanced content transclusion (note embedding) framework with robust deep-linking, enabling precise content reuse and seamless jump-to-source navigation."
+      - "Designed a **TypeScript** component system that lets users embed custom interactive elements in published notes."
+      - "Built path rewriting and slug normalization that separate the local vault's folder structure from public URLs, keeping links stable."
+      - "Added note embedding (transclusion) with deep links, custom icon support, and lowered graph rendering cost for large vaults."
   - organization: "howtocode.dev"
     position: "Open Source Technical Author"
     url: "https://sh.howtocode.dev"
     startDate: "2014-08-01"
     endDate: "2015-05-31"
-    summary: "Authored a comprehensive, open-source reference guide and interactive technical curriculum (in Bangla) designed to demystify Unix shell scripting, POSIX compliance standards, and terminal-driven automation pipelines."
+    summary: "Wrote an open-source guide (in Bangla) to Unix shell scripting, POSIX standards and terminal automation."
     highlights:
-      - "Served as the primary technical author and curriculum architect, designing detailed technical modules spanning from basic stream manipulation to complex shell lifecycle execution."
-      - "Deconstructed fundamental operating system primitives—including I/O redirection pipelines, file descriptor tracking, signal traps, and asynchronous process orchestration—into clear programmatic guides."
+      - "Covered I/O redirection, file descriptors, signal traps and background process management, from basics to advanced scripting."
 references:
   - name: "Mafinar Khan, Staff Software Engineer at Coffee Meets Bagel"
+    relationship: "First manager and mentor"
     reference: >
       I had the privilege of training Utsob at the very start of his career, and watching his journey to becoming a Director has been incredibly rewarding.
       From day one, he stood out as a remarkably fast learner who pushed boundaries by asking the hard questions. He possesses a vision- routinely seeing strategic opportunities
       and details that few others notice. As a curious polyglot, Utsob never let comfort zones limit his growth or his ability to adapt to new challenges. I highly recommend him
       to any organization looking for an exceptional, forward-thinking leader.
   - name: "Amit Richard, CEO of COdesign Ltd."
+    relationship: "Former employer"
     reference: >
       Beyond his technical expertise, Utsob played a vital role in shaping the culture and process of COdesign's technology division— building frameworks, mentoring talent,
       and laying the foundation for a more structured and scalable tech ecosystem. He consistently exemplified a solution-oriented mindset that significantly contributed to our growth and stability.
@@ -129,17 +131,17 @@ work:
     position: "Engineering Manager"
     startDate: "2024-11-15"
     summary: >
-      Operate as hands-on core platform architect and technical anchor for a multi-tenant logistics SaaS ecosystem, 
-      focusing on Go/Rust systems implementation, runtime performance optimization, and database schema design. 
-      [90% Platform Architecture & Core Systems Coding | 10% Low-Overhead Technical Alignment & Async Collaboration]
+      Lead architect of a multi-tenant logistics SaaS platform. Owns the platform's architecture and writes much of
+      its core code in Go and Rust, with a focus on service design, data modeling and runtime performance. Most of the
+      role is architecture and implementation; the rest is asynchronous technical alignment with a distributed team.
     highlights:
-      - "**Architectural Modernization:** Coded the architectural migration of legacy JavaScript proof-of-concept repositories to high-performance Go microservices, implementing strict type safety and reducing runtime memory overhead."
-      - "**High-Performance Scaling:** Re-engineered the backend Orders API architecture and optimized MongoDB document schemas and indexes, expanding instantaneous payload capacity from ~700 to 10,000+ concurrent orders per individual workspace within the multi-tenant platform."
-      - "**Automated Fleet Dispatching:** Devised a multi-driver bulk routing engine that automated manual order logistics coordination; built the backend data structures to ingest and map real-time geospatial driver trails."
-      - "**Geospatial Verification Engines:** Coded a proximity validation engine using geospatial indexing to automatically verify vehicle location presence within delivery geofences to resolve customer disputes."
-      - "**Real-Time Telemetry Systems:** Architected driver location tracking pipelines using MongoDB Time Series collections, reducing database storage overhead while scaling ingestion capabilities for high-frequency coordinate payloads."
-      - "**Distributed Architecture:** Implemented a decoupled background task consumer using RabbitMQ to offload long-running operational processes out of the critical request-response lifecycle, increasing platform uptime."
-      - "**Technical Alignment via RFCs:** Authored technical specifications and architectural blueprints (RFCs) for platform infrastructure revamps, providing clear execution paths for collaborating developers."
+      - "**Legacy Modernization:** Led the migration of legacy JavaScript proof-of-concept code to Go microservices, adding strict typing and reducing runtime memory use."
+      - "**Scalability:** Redesigned the Orders API and its MongoDB schemas and indexes, raising capacity from ~700 to 10,000+ concurrent orders per workspace."
+      - "**Fleet Dispatching:** Designed a multi-driver bulk routing engine that replaced manual order coordination, including the data model for real-time driver location trails."
+      - "**Geofence Verification:** Built a proximity check on geospatial indexes that confirms a vehicle was inside the delivery geofence, used to settle customer disputes."
+      - "**Telemetry Pipeline:** Designed driver location tracking on MongoDB Time Series collections, cutting storage overhead while handling high-frequency location writes."
+      - "**Asynchronous Processing:** Moved long-running operations off the request path into a RabbitMQ-based background worker, improving platform uptime."
+      - "**Technical Direction:** Set the platform's architecture direction through RFCs and design documents for infrastructure overhauls, and review design and code changes to core services so collaborating developers have clear implementation paths."
   - name: "COdesign Ltd."
     website: "https://co.design"
     location: "Dhaka"
@@ -147,67 +149,57 @@ work:
     startDate: "2017-02-04"
     endDate: "2024-11-14"
     summary: >
-      Served as the principal software architect and technical authority across client and internal ecosystems, 
-      personally executing platform design, backend development, and systems migrations from first principles. 
-      [70% Technical Architecture, Systems Design & Implementation | 30% Cross-Functional Alignment & Technical Mentorship]
+      Principal architect and technical authority for client and internal platforms. Designed the systems, wrote
+      backend code and led migrations, while mentoring engineers and working with design and business teams.
     highlights:
-      - "**Architectural Paradigm Shift:** Architected the migration of core client frameworks away from monolithic WordPress platforms to a decoupled Django (Python) and Wagtail CMS backend paired with a Vue.js Server-Side Rendered (SSR) frontend, improving page-load velocities and SEO performance."
-      - "**Resource-Optimized Enterprise Architecture:** Designed and built BRAC's institutional e-learning platform utilizing Django and Vue.js; engineered a modular course dashboard and question-bank infrastructure that sustained 90,000+ active users on a single, restricted 4GB RAM / 2 vCPU node."
-      - "**Supply Chain Compliance Platforms:** Engineered a factory safety, workshop tracking, and audit certification platform for BRAC, architecting data schemas that managed multi-tiered corporate/laborer enrollments and cascading pipeline verification data."
-      - "**Engineering Standards & CI/CD:** Integrated automated testing suites and CI/CD pipelines into the core delivery workflow, reducing manual release overhead and cutting end-to-end software delivery cycles by 33%."
-      - "**Design Systems & Core Frontend Integration:** Coded the structural frontend implementation and localization frameworks for major enterprise deployments, executing Toyota’s global UI standards for Toyota Bangladesh and modernizing the frontend platform for Prothom Alo."
-      - "**Open-Source Infrastructure:** Spearheaded internal open-source development initiatives, organizing the technical construction and public release of utility packages and developer tools used across the engineering organization."
+      - "**Platform Re-architecture:** Led the move of client platforms from monolithic WordPress to a decoupled Django and Wagtail CMS backend with a server-side-rendered Vue.js frontend, improving page load times and SEO."
+      - "**Design for Constrained Resources:** Designed and built BRAC's e-learning platform (Django, Vue.js), including a modular course dashboard and question bank, serving 90,000+ active users on a single 4 GB RAM / 2 vCPU server."
+      - "**Compliance Platform:** Built a factory safety, workshop tracking and audit certification platform for BRAC, with data models for multi-tier corporate and worker enrollment and staged verification."
+      - "**Delivery Process:** Introduced automated testing and CI/CD pipelines, cutting end-to-end delivery cycles by 33%."
+      - "**Engineering Culture & Mentoring:** Built the technology division's engineering processes and internal frameworks and mentored engineers, giving the division a more structured, scalable way of working."
+      - "**Frontend Architecture:** Implemented the frontend structure and localization for Toyota Bangladesh to Toyota's global UI standards, and modernized Prothom Alo's frontend platform."
+      - "**Internal Open Source:** Started the company's open-source program, building and releasing utility packages and developer tools used across engineering."
   - name: "Panacea Systems Ltd."
     location: "Dhaka"
     position: "DevOps Programmer"
     startDate: "2015-06-01"
     endDate: "2016-09-30"
     summary: >
-      Operated as a foundational infrastructure and systems programmer within a high-velocity fintech ecosystem, 
-      taking ownership of bare-metal server virtualization, continuous deployment workflows, and custom backend service layers.
-      [100% Infrastructure as Code, Systems Virtualization & Core Service Implementation]
+      Infrastructure and systems programmer at a fintech company, responsible for server virtualization,
+      deployment pipelines and custom backend services.
     highlights:
-      - "**Private Cloud Infrastructure:** Engineered and provisioned an in-house, bare-metal private cloud platform leveraging OpenStack, abstracting raw underlying hardware nodes to establish a virtualized execution environment for core production workloads."
-      - "**Conversational NLP Engines:** Built a custom parser and context classification engine integrated with transactional messaging APIs, systematically mapping unstructured token sequences into dynamic backend data structures."
-      - "**Automated Platform Deployment:** Architected isolated environment configurations and continuous deployment pipelines, allowing distributed fintech application layers to be compiled, validated, and safely shipped onto local cloud instances."
+      - "**Private Cloud:** Built an on-premises OpenStack private cloud on bare-metal servers to host core production workloads."
+      - "**NLP Parser:** Built a parser and context classifier for transactional messaging APIs, turning unstructured messages into structured backend data."
+      - "**Deployment Pipelines:** Set up isolated environments and continuous deployment so fintech services were built, tested and shipped to the private cloud automatically."
 projects:
   - name: "DotR"
     startDate: "2025-11-17"
     description: >
-      A high-performance dotfiles manager written in Rust, published natively on crates.io and Homebrew. 
-      Manages cross-machine configurations through environment profiles, Tera templating, a layered 
-      variable system, and pluggable secret backends, with zero runtime dependencies beyond the 
-      compiled static binary.
+      Dotfiles manager written in Rust, distributed on crates.io and Homebrew as a single static binary.
+      Manages per-machine configuration with profiles, Tera templates, layered variables and pluggable secret storage.
     highlights:
-      - "**Zero-Dependency, Cross-Platform Distribution:** Ships as a single statically-linked Rust binary — installable via Homebrew, Cargo, or prebuilt release artifacts (macOS/Linux, glibc & musl, x86_64 & aarch64) — with man pages, a JSON Schema for editor validation of `config.toml`, and dynamic shell completions for bash, zsh, fish, elvish, PowerShell, and Nushell."
-      - "**Layered Variable Precedence:** Implements a five-source resolution cascade (config → environment → package → profile → user secrets), letting templates adapt per-machine without configuration duplication, with a `print-vars` command to debug the resolved result."
-      - "**Pluggable Secret Backends:** Evolved one-time credential prompting into three interchangeable storage backends — a gitignored TOML file, the native OS keychain, and a shared Bitwarden secure note — the latter driving the full `bw` CLI session lifecycle (auto login/unlock/vault-sync, re-locking only if DotR itself acquired the lock)."
-      - "**Dependency-Aware Package Graph:** Packages declare dependencies that are resolved and pulled in automatically across deploy/update/diff, with safeguards that block removing a package still referenced elsewhere in `config.toml` unless explicitly forced."
-      - "**Dual Symlink Strategies:** Supports whole-directory ('folded') symlinking for live-editing workflows alongside per-file ('unfolded', stow-style) symlinking that preserves a real destination directory for untracked local files, with safety checks ensuring deploy/clean/update never touch paths outside a package's own tree."
-      - "**Production-Grade OSS Practices:** Backed by a full mdBook documentation site, Codecov-tracked test coverage, deps.rs dependency-freshness monitoring, and `cargo vet` supply-chain auditing."
+      - "**Configuration Design:** A five-level variable precedence (config → environment → package → profile → user secrets) and a dependency-aware package graph let one repository adapt to every machine without duplicated config."
+      - "**Pluggable Secret Backends:** Three interchangeable backends: a gitignored TOML file, the OS keychain, and Bitwarden, including full `bw` session handling."
+      - "**Release Engineering:** Cross-platform builds (macOS/Linux, x86_64/aarch64, glibc/musl), mdBook documentation, Codecov test coverage and `cargo vet` supply-chain auditing."
     website: "https://dotr.utsob.me"
   - name: "BooxRichAnnotations"
     startDate: "2026-06-01"
     description: >
-      A specialized native Android application engineered for Onyx Boox devices to extract and export complex 
-      reading annotations. Bypasses standard hardware limitations by interacting directly with the proprietary 
-      NeoReader system content providers to access hidden annotation metadata.
+      Native Android app for Onyx Boox e-readers that exports reading annotations, including metadata NeoReader
+      does not expose, by reading its system content providers directly.
     highlights:
-      - "**Provider Schema Reverse-Engineering:** Reverse-engineered NeoReader's proprietary ContentProvider database schemas to extract hidden annotation metadata assets, including precise color values, textual styles (wavy, dashed, strikethrough), chapter contexts, and underlying spatial placement."
-      - "**Multi-Format Data Pipeline:** Built a robust export and transformation engine supporting automated deduplication, customized target storage directories, and dynamic file layouts via JSON, CSV, and Pebble-templated Markdown structures."
-      - "**E-Ink Hardware Optimization:** Enforced strict architectural constraints across 12 consecutive production releases to optimize execution on resource-constrained E-ink hardware, mandating zero-animation rendering loops, high-contrast monochrome layouts, 17–22sp typography scaling, and fixed 48dp touch interaction target areas."
+      - "**Reverse Engineering:** Mapped NeoReader's proprietary ContentProvider schemas to recover hidden annotation data: colors, highlight styles, chapter context and position."
+      - "**Export Pipeline:** Export engine with deduplication, configurable destinations, and JSON, CSV and Pebble-templated Markdown output."
+      - "**E-ink Design Constraints:** Held strict e-ink UI rules across 12 releases: no animations, high-contrast monochrome layouts, large type and 48dp touch targets."
     website: "https://github.com/uroybd/BooxRichAnnotations"
   - name: "Advent of Code Solutions"
     startDate: "2015-12-01"
     description: >
-      A collection of over 85 constraint-satisfaction and graph theory problems solved in Rust across six 
-      years (2015, 2021–2025). Emphasizes compile-time specialization, state-space reduction, and measurable 
-      sub-millisecond throughput verified by a continuous Criterion benchmarking pipeline.
+      85+ algorithm and graph problems solved in Rust across six years (2015, 2021–2025), focused on state-space
+      reduction and sub-millisecond runtimes tracked with Criterion benchmarks.
     highlights:
-      - "**Compile-Time Specialization:** Designed a compile-time-specialized A* search engine using const generics (`astar_fuel_cost<const N: usize>`) for a multi-agent pathfinding scheduler, encoding spatial map depth directly into type parameters to eliminate runtime branching and stack allocation variance."
-      - "**Bitmask State Compression:** Reduced a 26-node graph traversal problem to a bitmask-compressed state space by encoding open-node sets as raw integer bits, transforming an intractable joint enumeration into a high-velocity dynamic programming sequence over integer keys."
-      - "**Mathematical Set Optimization:** Applied a signed inclusion-exclusion paradigm over multi-dimensional cuboid intersections to accurately track volume matrices in unbounded 3D spaces without materializing massive underlying grids."
-      - "**Performance Benchmarking & Profiling:** Built a comprehensive Criterion benchmarking harness featuring a baseline-diffing engine (`update_benchmarks`) to systematically catch optimization regressions, leveraging Rayon data-parallelism and fxhash primitives across runtime hotspots."
+      - "**Algorithm Design:** Const-generic A* search, bitmask-compressed dynamic programming over graph states, and inclusion–exclusion over 3D cuboid intersections."
+      - "**Performance Engineering:** Criterion benchmark harness with baseline diffing to catch regressions, plus Rayon parallelism and fxhash in hot paths."
     website: "https://github.com/uroybd/AdventOfCode"
 languages:
   - language: "Bengali"
@@ -215,17 +207,12 @@ languages:
   - language: "English"
     fluency: "Advanced"
 interests:
-  - name: "Aesthetic Theory, Active Reading & Generative Synthesis"
+  - name: "Reading & Writing"
     keywords:
-      - "Philosophical Aesthetics & Structural Theory (Music, Painting, Literature)"
-      - "Intensive Annotation & Critical Textual Deconstruction"
-      - "Digital Gardening & Public Synthesizing ([https://hermitage.utsob.me](https://hermitage.utsob.me))"
-      - "Analytical Review Writing & Comparative Artistic Frameworks"
-      - "Creative Writing & Structural Idea Construction"
-      - "Relational Cataloging Data Modeling (uroybd/Book-Base)"
+      - "Aesthetics (music, painting, literature)"
+      - "Digital gardening (hermitage.utsob.me)"
+      - "Critical reviews & creative writing"
   - name: "Open Source"
     keywords:
-      - "Upstream Code Contributions"
-      - "End-User Focused Application Optimization"
-      - "Hardware-Constrained Accessibility & Input Subsystems"
-      - "Ecosystem & Non-Technical Community Maintenance"
+      - "Upstream contributions"
+      - "Accessibility on constrained hardware"
