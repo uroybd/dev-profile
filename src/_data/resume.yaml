@@ -1,16 +1,17 @@
 meta:
   theme: "professional"
-  lastModified: "2026-03-12T00:00:00.000Z"
+  lastModified: "2026-11-23T00:00:00.000Z"
 basics:
   name: "Utsob Roy"
   label: "Systems Architect | Staff Software Engineer"
   image: "src/images/avatar-transparent.png"
   summary: >
-    Systems architect and hands-on engineer with 11+ years of experience designing distributed platforms,
-    high-performance backends and core infrastructure. Owns architecture end to end: design specs (RFCs),
-    data models, implementation, code review and production rollout. Currently Engineering Manager at FULFLLD,
-    working as lead architect of its multi-tenant logistics SaaS platform; previously Technology Director at
-    COdesign for nearly eight years. Still writes production code every day and contributes to open-source projects.
+    Systems architect and hands-on engineer with 11+ years of end-to-end ownership across bare-metal infrastructure,
+    distributed platforms, and high-throughput backends. Specializes in holding full-stack architectural context—from
+    Linux internals and data modeling to formal specifications (RFCs) and production rollout—to build systems that
+    remain verifiable and resilient under scale. Currently Engineering Manager at FULFLLD, serving as lead architect of
+    its multi-tenant logistics SaaS platform; previously Technology Director at COdesign for nearly eight years. Writes
+    production Go and Rust daily and enforces spec-driven, test-verified engineering workflows.
   website: "https://dev.utsob.me"
   url: "https://dev.utsob.me"
   email: "connect@utsob.me"
@@ -27,10 +28,12 @@ basics:
       url: "https://www.linkedin.com/in/uroybd"
       network: "linkedin"
 skills:
-  - name: "Software Architecture & Design"
+  - name: "Software Architecture & Verification"
     keywords:
       - "System Design"
       - "Distributed Systems"
+      - "Spec-Driven Development"
+      - "Deterministic State Modeling"
       - "Microservices Architecture"
       - "Event-Driven Architecture"
       - "Multi-Tenant SaaS Architecture"
@@ -38,12 +41,14 @@ skills:
       - "Data Modeling & Schema Design"
       - "Scalability & Performance Engineering"
       - "Legacy System Modernization"
+      - "Automated Verification & Oracle Testing"
   - name: "Technical Leadership"
     keywords:
       - "Architecture Decision Making"
       - "Technical Specifications (RFCs)"
-      - "Code Review"
+      - "Architectural Audits & Code Review"
       - "Engineering Process & CI/CD"
+      - "Incident Command & Root-Cause Analysis"
       - "Mentoring"
       - "Cross-Functional Collaboration"
   - name: "Cloud & Infrastructure"
@@ -53,8 +58,8 @@ skills:
       - "Terraform"
       - "AWS"
       - "Google Cloud Platform (GCP)"
-      - "OpenStack"
-      - "Cloudflare"
+      - "OpenStack (Bare-Metal)"
+      - "Cloudflare Workers & R2"
   - name: "Data & Messaging"
     keywords:
       - "PostgreSQL"
@@ -65,25 +70,26 @@ skills:
       - "RabbitMQ"
   - name: "Systems & Operating Systems"
     keywords:
-      - "Linux / Unix"
+      - "Linux / Unix Internals"
       - "POSIX"
-      - "Memory Optimization"
+      - "Memory & Runtime Optimization"
       - "Process Management"
       - "Shell Scripting (Bash, Zsh, Nushell)"
   - name: "Programming Languages"
     keywords:
-      - "Go"
       - "Rust"
+      - "Go"
       - "Python"
       - "TypeScript / JavaScript"
       - "Lua"
       - "Common Lisp"
   - name: "Frameworks & Runtimes"
     keywords:
+      - "WebAssembly (WASM)"
       - "Django"
       - "Wagtail CMS"
       - "Node.js"
-      - "Vue.js"
+      - "Vue.js / Svelte"
       - "Tauri"
 volunteer:
   - organization: "KOReader"
@@ -92,7 +98,7 @@ volunteer:
     startDate: "2022-01-01"
     summary: "Contributor to KOReader, a cross-platform document reader for e-ink devices."
     highlights:
-      - "Rewrote the highlight export plugin in **Lua**, restructuring its data model so new export formats and note-app integrations can be added easily."
+      - "Rewrote the highlight export plugin in **Lua**, restructuring its data model so new export formats and note-app integrations can be added cleanly."
       - "Added the Bengali Probhat keyboard layout to the on-screen keyboard."
   - organization: "Obsidian Digital Garden"
     position: "Open Source Contributor"
@@ -101,16 +107,16 @@ volunteer:
     summary: "Contributor to a popular open-source plugin that publishes Obsidian Markdown vaults as static websites."
     highlights:
       - "Designed a **TypeScript** component system that lets users embed custom interactive elements in published notes."
-      - "Built path rewriting and slug normalization that separate the local vault's folder structure from public URLs, keeping links stable."
-      - "Added note embedding (transclusion) with deep links, custom icon support, and lowered graph rendering cost for large vaults."
+      - "Built path rewriting and slug normalization that decouple local vault directory hierarchy from public URLs, preserving link stability."
+      - "Added note transclusion with deep links, custom icon support, and reduced graph rendering overhead for large vaults."
   - organization: "howtocode.dev"
     position: "Open Source Technical Author"
     url: "https://sh.howtocode.dev"
     startDate: "2014-08-01"
     endDate: "2015-05-31"
-    summary: "Wrote an open-source guide (in Bangla) to Unix shell scripting, POSIX standards and terminal automation."
+    summary: "Authored an open-source guide (in Bangla) to Unix shell scripting, POSIX standards, and terminal automation."
     highlights:
-      - "Covered I/O redirection, file descriptors, signal traps and background process management, from basics to advanced scripting."
+      - "Covered I/O redirection, file descriptors, signal traps, and background process management from first principles."
 references:
   - name: "Mafinar Khan, Staff Software Engineer at Coffee Meets Bagel"
     relationship: "First manager and mentor"
@@ -131,17 +137,17 @@ work:
     position: "Engineering Manager"
     startDate: "2024-11-15"
     summary: >
-      Lead architect of a multi-tenant logistics SaaS platform. Owns the platform's architecture and writes much of
-      its core code in Go and Rust, with a focus on service design, data modeling and runtime performance. Most of the
-      role is architecture and implementation; the rest is asynchronous technical alignment with a distributed team.
+      Lead architect of a multi-tenant logistics SaaS platform. Owns end-to-end system architecture, state invariants,
+      and core implementation in Go and Rust, focusing on service boundaries, data modeling, and runtime reliability
+      across a distributed engineering team.
     highlights:
-      - "**Legacy Modernization:** Led the migration of legacy JavaScript proof-of-concept code to Go microservices, adding strict typing and reducing runtime memory use."
-      - "**Scalability:** Redesigned the Orders API and its MongoDB schemas and indexes, raising capacity from ~700 to 10,000+ concurrent orders per workspace."
-      - "**Fleet Dispatching:** Designed a multi-driver bulk routing engine that replaced manual order coordination, including the data model for real-time driver location trails."
-      - "**Geofence Verification:** Built a proximity check on geospatial indexes that confirms a vehicle was inside the delivery geofence, used to settle customer disputes."
-      - "**Telemetry Pipeline:** Designed driver location tracking on MongoDB Time Series collections, cutting storage overhead while handling high-frequency location writes."
-      - "**Asynchronous Processing:** Moved long-running operations off the request path into a RabbitMQ-based background worker, improving platform uptime."
-      - "**Technical Direction:** Set the platform's architecture direction through RFCs and design documents for infrastructure overhauls, and review design and code changes to core services so collaborating developers have clear implementation paths."
+      - "**Core Systems Migration:** Led the transition from loosely typed JavaScript proof-of-concept services to deterministic **Go** microservices, enforcing strict schema contracts and reducing runtime memory footprint."
+      - "**High-Throughput Scalability:** Re-architected the Orders API and its MongoDB schemas and indexes, scaling throughput from ~700 to 10,000+ concurrent orders per workspace."
+      - "**Fleet Dispatching Engine:** Designed a multi-driver bulk routing engine and real-time location trail data model, replacing manual order coordination."
+      - "**Geofence Verification:** Engineered geospatial index proximity verification to deterministically confirm vehicle presence within delivery geofences for dispute resolution."
+      - "**Telemetry Pipeline:** Architected driver location ingestion on MongoDB Time Series collections, cutting storage overhead while sustaining high-frequency writes."
+      - "**Asynchronous Isolation:** Decoupled long-running operations from the synchronous request path using RabbitMQ workers, improving platform uptime under load."
+      - "**Architectural Governance:** Defined platform direction through RFCs, led live production incident resolution, and enforced structural invariants across core service reviews."
   - name: "COdesign Ltd."
     website: "https://co.design"
     location: "Dhaka"
@@ -149,29 +155,40 @@ work:
     startDate: "2017-02-04"
     endDate: "2024-11-14"
     summary: >
-      Principal architect and technical authority for client and internal platforms. Designed the systems, wrote
-      backend code and led migrations, while mentoring engineers and working with design and business teams.
+      Principal architect and technical authority across client and internal platforms. Designed system architectures,
+      wrote core backend services, and led platform migrations while establishing enduring engineering processes.
     highlights:
-      - "**Platform Re-architecture:** Led the move of client platforms from monolithic WordPress to a decoupled Django and Wagtail CMS backend with a server-side-rendered Vue.js frontend, improving page load times and SEO."
-      - "**Design for Constrained Resources:** Designed and built BRAC's e-learning platform (Django, Vue.js), including a modular course dashboard and question bank, serving 90,000+ active users on a single 4 GB RAM / 2 vCPU server."
-      - "**Compliance Platform:** Built a factory safety, workshop tracking and audit certification platform for BRAC, with data models for multi-tier corporate and worker enrollment and staged verification."
+      - "**Platform Re-architecture:** Migrated client platforms from monolithic WordPress to decoupled Django and Wagtail CMS backends with SSR Vue.js frontends, improving latency and search rankings."
+      - "**Resource-Constrained Systems:** Architected and built BRAC's e-learning platform (Django, Vue.js), serving 90,000+ active users on a single 4 GB RAM / 2 vCPU server through lean query and caching design."
+      - "**Compliance & Verification Platform:** Designed a factory safety, workshop tracking, and audit certification system for BRAC with multi-tier enrollment and staged verification state models."
       - "**Delivery Process:** Introduced automated testing and CI/CD pipelines, cutting end-to-end delivery cycles by 33%."
-      - "**Engineering Culture & Mentoring:** Built the technology division's engineering processes and internal frameworks and mentored engineers, giving the division a more structured, scalable way of working."
-      - "**Frontend Architecture:** Implemented the frontend structure and localization for Toyota Bangladesh to Toyota's global UI standards, and modernized Prothom Alo's frontend platform."
-      - "**Internal Open Source:** Started the company's open-source program, building and releasing utility packages and developer tools used across engineering."
+      - "**Engineering Standards & Mentoring:** Built the division's core engineering workflows and internal frameworks, mentoring engineers into structured, self-reliant systems builders."
+      - "**Enterprise Frontend Architecture:** Implemented frontend architecture and localization for Toyota Bangladesh to Toyota's global standards, and modernized Prothom Alo's frontend platform."
+      - "**Internal Open Source:** Founded the company's open-source program, shipping shared utility packages and developer tooling across engineering teams."
   - name: "Panacea Systems Ltd."
     location: "Dhaka"
     position: "DevOps Programmer"
     startDate: "2015-06-01"
     endDate: "2016-09-30"
     summary: >
-      Infrastructure and systems programmer at a fintech company, responsible for server virtualization,
-      deployment pipelines and custom backend services.
+      Infrastructure and systems programmer at a fintech company, owning bare-metal virtualization, automated
+      deployment pipelines, and message-parsing backend services.
     highlights:
-      - "**Private Cloud:** Built an on-premises OpenStack private cloud on bare-metal servers to host core production workloads."
-      - "**NLP Parser:** Built a parser and context classifier for transactional messaging APIs, turning unstructured messages into structured backend data."
-      - "**Deployment Pipelines:** Set up isolated environments and continuous deployment so fintech services were built, tested and shipped to the private cloud automatically."
+      - "**Bare-Metal Private Cloud:** Architected and deployed an on-premises OpenStack private cloud from scratch in 7 days (live demo in 3) without prior documentation, hosting core fintech production workloads."
+      - "**Transactional NLP Parser:** Built a parser and context classifier for transactional messaging APIs, converting unstructured messages into deterministic structured payloads."
+      - "**Deployment Automation:** Engineered isolated environments and continuous deployment pipelines so fintech services were built, verified, and shipped to the private cloud automatically."
 projects:
+  - name: "Meghnaad"
+    startDate: "2026-01-01"
+    description: >
+      Local-first Taskwarrior sync engine and superset written in Rust and compiled to WebAssembly, running on
+      Cloudflare Workers and R2. Delivers multi-device sync, Kanban boards, and dashboards in the user plane while
+      preserving strict schema and behavioral parity with the upstream `task` CLI.
+    highlights:
+      - "**Strict Plane Separation:** Kept the storage and sync plane 100% compatible with native Taskwarrior data models while projecting Kanban boards and dashboards purely in the user plane via User Defined Attributes (UDAs)."
+      - "**Spec-Driven Governance:** Engineered with immutable specifications, explicit architectural boundary guardrails, and acceptance criteria verified against the upstream `task` 3.5.0 binary."
+      - "**Entropy & Smell Audits:** Enforced a ratcheting Clippy static-analysis baseline and scheduled architectural `(smells)` audits every 10,000 lines of edits to prevent structural drift across AI-assisted development."
+    website: "https://github.com/uroybd/Meghnaad"
   - name: "DotR"
     startDate: "2025-11-17"
     description: >

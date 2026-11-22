@@ -355,7 +355,7 @@ function render(resume) {
 </head>
 <body>
   <header>
-    ${basics.image ? `<img src="${basics.image}" alt="${basics.name}">` : ""}
+    ${basics.image ? `<img src="${basics.image}" alt="">` : ""}
     <div>
       <h1>${basics.name || ""}</h1>
       <h2>${basics.label || ""}</h2>
