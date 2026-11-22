@@ -179,7 +179,7 @@ work:
       - "**Deployment Automation:** Engineered isolated environments and continuous deployment pipelines so fintech services were built, verified, and shipped to the private cloud automatically."
 projects:
   - name: "Meghnaad"
-    startDate: "2026-01-01"
+    startDate: "2026-10-07"
     description: >
       Local-first Taskwarrior sync engine and superset written in Rust and compiled to WebAssembly, running on
       Cloudflare Workers and R2. Delivers multi-device sync, Kanban boards, and dashboards in the user plane while
